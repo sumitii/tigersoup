@@ -3,3 +3,5 @@ languageCode = "en-us"
 title = "TigerSoup"
 theme = "ananke"
 publishDir = "docs"
+[params]
+    custom_css = ["/css/navigation.css"]
