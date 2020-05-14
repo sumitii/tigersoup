@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>localhost:1313/posts/my-first-post/</loc>
+    <loc>http://sumitii.github.io/tigersoup/posts/my-first-post/</loc>
     <lastmod>2020-05-12T11:17:04-07:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313/posts/</loc>
+    <loc>http://sumitii.github.io/tigersoup/posts/</loc>
     <lastmod>2020-05-12T11:17:04-07:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313/</loc>
+    <loc>http://sumitii.github.io/tigersoup/</loc>
     <lastmod>2020-05-12T11:17:04-07:00</lastmod>
   </url>
   
   <url>
-    <loc>localhost:1313/categories/</loc>
+    <loc>http://sumitii.github.io/tigersoup/categories/</loc>
   </url>
   
   <url>
-    <loc>localhost:1313/tags/</loc>
+    <loc>http://sumitii.github.io/tigersoup/tags/</loc>
   </url>
   
 </urlset>
