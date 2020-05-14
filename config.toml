@@ -1,7 +1,7 @@
-baseURL = "http://sumitii.github.io/tigersoup/"
+baseURL = "localhost:1313/"
 languageCode = "en-us"
 title = "TigerSoup"
 theme = "ananke"
 publishDir = "docs"
 [params]
-    custom_css = ["/css/navigation.css"]
+    custom_css = ["/css/navigation.css", "/css/index.css"]
