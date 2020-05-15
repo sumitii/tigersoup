@@ -1,0 +1,28 @@
+<nav class="navigation ph4-ns" role="navigation">
+  <div class="mw9 center ph3-ns">
+    <div class="cf ph2-ns">
+      <div class="fl w-50 w-40-ns pa2">
+        <div>
+          <a href="{{ .Site.BaseURL }}" class="navigation__text fw2 no-underline">
+            <span class="f5 lh-title b lh-title">
+              {{ .Title | default .Site.Title }}
+            </span>
+            {{ with .Params.description }}
+              <span class="f5 lh-title center">
+                {{ . }}
+              </span>
+            {{ end }}
+          </a>
+        </div>
+      </div>
+      <div class="fl w-50 w-60-ns pa2">
+        <div class="tr">
+          <a href="#" class="navigation__text">
+            <span class="f5 b lh-title">{{ .Params.contact }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
