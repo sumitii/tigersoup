@@ -1,4 +1,4 @@
-baseURL = "sumitii.github.io/tigersoup/"
+baseURL = "http://sumitii.github.io/tigersoup/"
 languageCode = "en-us"
 title = "TigerSoup"
 theme = "ananke"
