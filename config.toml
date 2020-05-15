@@ -4,4 +4,4 @@ title = "TigerSoup"
 theme = "ananke"
 publishDir = "docs"
 [params]
-    custom_css = ["/css/navigation.css", "/css/index.css"]
+    custom_css = ["/css/_navigation.css", "/css/_index.css"]
