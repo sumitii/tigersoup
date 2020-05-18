@@ -1,8 +1,9 @@
 {{ define "main" }}
-<div class="ph3 ph4-ns pt4">
-  <div class="intro-copy fl w-100 w-60-ns ph4">
-    <h3>{{ .Params.introductory_copy }}</h3>
-  </div>
+<div class="intro-copy fl tc tl-ns w-100 w-60-ns ph5">
+  <h3>{{ .Params.introductory_copy }}</h3>
 </div>
 <div class="hero-image" style="background-image: url('{{ .Params.hero_image }}');"></div>
+
+{{ partial "our-story.html" (dict "introductory_copy" "When making tiger soup, it is best to first focus on catching a tiger." "featured_image" "images/chef.png" )}}
 {{ end }}
+
