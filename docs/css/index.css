@@ -19,8 +19,24 @@
   line-height: 20px;
 }
 
+.image-wrapper--challenges {
+  margin: 0 auto;
+}
+
+.side-nav__link {
+  color: #000 !important;
+  display: block;
+  text-decoration: none;
+}
+
 @media screen and (min-width: 30em) {
   .intro-copy {
     font-size: 24px;
+  }
+
+  .side-nav {
+    position: fixed;
+    top: 250px;
+    z-index: 1;
   }
 }
