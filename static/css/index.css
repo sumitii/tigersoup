@@ -23,10 +23,38 @@
   margin: 0 auto;
 }
 
+.side-nav {
+  display: none;
+}
+
 .side-nav__link {
   color: #000 !important;
   display: block;
   text-decoration: none;
+}
+
+.navigation-list {
+  list-style: none;
+}
+
+.navigation-list__subnav {
+  margin-top: 24px;
+}
+
+.subnav-list-item {
+  margin-bottom: 12px;
+}
+
+.-active {
+  font-weight: bold;
+}
+
+.-show {
+  display: block;
+}
+
+.-hide {
+  display: none;
 }
 
 @media screen and (min-width: 30em) {
