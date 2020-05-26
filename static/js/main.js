@@ -34,15 +34,16 @@ class Main {
     this.section = document.querySelector(SELECTORS.PAGE_SECTION);
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
-    this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
+    // this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
 
     this.init();
   }
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
-      window.addEventListener("scroll", this.handleScrollDown);
-      window.addEventListener("scroll", this.handleSubnavigationHighlight);
+      window.addEventListener("scroll", () => {
+        this.handleScrollDown(this.navigationLinks);
+      });
     });
   }
 
@@ -50,7 +51,9 @@ class Main {
    * Adds "show" class to navigation
    */
   displayNavigation() {
-    this.navigation.classList.add(CLASSES.SHOW);
+    if (!this.navigation.classList.contains(CLASSES.SHOW)) {
+      this.navigation.classList.add(CLASSES.SHOW);
+    }
   }
 
   /**
@@ -61,23 +64,26 @@ class Main {
     this.navigation.classList.remove(CLASSES.SHOW);
   }
   
+  
   /**
    * Handle active scrolling and displaying navigation
    */
-  handleScrollDown() {
+  handleScrollDown(navLinks) {
     let fromTop = window.scrollY;
-    this.navigationLinks.forEach(link => {
-      let sectionHash = document.querySelector(link.hash);
-      if (sectionHash != null) {
-        if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
-          this.displayNavigation();
-          link.classList.add(CLASSES.ACTIVE);
-        } else {
-          this.hideNavigation();
-          link.classList.remove(CLASSES.ACTIVE);
-        }
+    let shouldHide = true;
+    navLinks.forEach(link => {
+      let section = document.querySelector(link.hash);
+      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+        shouldHide = false;
+        this.displayNavigation();
+        link.classList.add(CLASSES.ACTIVE);
+      } else {
+        link.classList.remove(CLASSES.ACTIVE);  
       }
     });
+    if (shouldHide) {
+      this.hideNavigation();
+    }
   }
 
   /**
@@ -85,20 +91,19 @@ class Main {
    * TODO: ABSTRACT THIS FUNCTION TO WORK FOR BOTH
    */
 
-   handleSubnavigationHighlight() {
-     let fromTop = window.scrollY;
-     this.subnavigationLinks.forEach(link => {
-       let sectionHash = document.querySelector(link.hash);
-       if (sectionHash != null) {
-         if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
-           link.classList.add(CLASSES.ACTIVE);
-         } else {
-           link.classList.remove(CLASSES.ACTIVE);
-         }
-       }
-     })
-
-   }
+  //  handleSubnavigationHighlight() {
+  //    let fromTop = window.scrollY;
+  //    this.subnavigationLinks.forEach(link => {
+  //      let sectionHash = document.querySelector(link.hash);
+  //      if (sectionHash != null) {
+  //        if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
+  //          link.classList.add(CLASSES.ACTIVE);
+  //        } else {
+  //          link.classList.remove(CLASSES.ACTIVE);
+  //        }
+  //      }
+  //    })
+// }
 }
 
 new Main();

@@ -23,6 +23,35 @@
   margin: 0 auto;
 }
 
+.article-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.article-subheading {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 14px;
+}
+
+.article-author-wrapper {
+  align-items: center;
+  flex-direction: row;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  line-height: 16px;
+  margin-top: 14px;
+}
+
+.article-author-avatar {
+  margin-right: 8px;
+}
+
+/**
+NAVIGATION CSS
+**/
+
 .side-nav {
   display: none;
 }
@@ -45,6 +74,9 @@
   margin-bottom: 12px;
 }
 
+/**
+MODIFYING CLASSES
+**/
 .-active {
   font-weight: bold;
 }
@@ -64,7 +96,7 @@
 
   .side-nav {
     position: fixed;
-    top: 250px;
+    top: 50px;
     z-index: 1;
   }
 }

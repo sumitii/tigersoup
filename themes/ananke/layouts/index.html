@@ -6,20 +6,45 @@
   <img src="{{ .Params.hero_image }}" />
 </div>
 {{ partial "vertical-navigation.html" . }}
-<div id="about" class="js-section">
-  <section id="our-story" class="section-wrapper flex mt6">
+<section id="about" class="js-section">
+  <div id="our-story" class="section-wrapper flex pt6">
     {{ partial "our-story.html" (dict "introductory_copy" "When making tiger soup, it is best to first focus on catching a tiger." "featured_image" "images/chef.png" )}}
-  </section>
-  <section id="who-we-are" class="section-wrapper flex mt6">
+  </div>
+  <div id="who-we-are" class="section-wrapper flex pt6">
     {{ partial "who-we-are.html" (dict "introductory_copy" "Long ago, there was a King and his favorite chef." "featured_image" "images/who-we-are.png" )}}
-  </section>
-  <section id="leadership" class="section-wrapper flex mt6">
+  </div>
+  <div id="leadership" class="section-wrapper flex pt6">
     {{ partial "leadership.html" (dict "introductory_copy" "Some intro copy needs to go here." "featured_image" "images/bill_fristch.png")}}
-  </section>
-  <section id="ts-challenges" class="section-wrapper flex mt6">
+  </div>
+  <div id="ts-challenges" class="section-wrapper flex pt6">
     {{ partial "ts-challenges.html" (dict "featured_image" "images/tiger_hunt.png")}}
-  </section>
-</div>
+  </div>
+</section>
+<section id="articles" class="js-section">
+  {{ range where .Site.RegularPages "Type" "post"}}
+    <div class="artcle-image-wrapper pt6 w-75 fr">
+      <img src="{{ .Params.featured_image }}" />
+    </div>
+    <div class="section-wrapper flex flex-column w-100 pa4">
+      <div class="measure f4 lh-copy ml0 ml7-ns ml2-m">
+        <div class="title-wrapper">
+          <h3 class="article-title">{{ .Title }}</h3>
+          <span class="article-subheading">{{ .Params.description }}</span>
+          <div class="article-author-wrapper flex">
+            <div class="article-author-avatar">
+              <img src="{{.Params.author_avatar }}" />
+            </div>
+            <div class="article-author-information">
+              <div>{{ .Params.author }}</div>
+              <div>{{ .PublishDate.Format "January 2, 2006"}}</div>
+            </div>
+          </div>
+        </div>
+        <div>{{ .Content }}</div>
+      </div>
+    </div>
+  {{ end }}
+</section>
 
 {{ end }}
 
