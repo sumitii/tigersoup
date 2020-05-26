@@ -4,7 +4,7 @@ description: "Work and all things life in a post COVID world"
 featured_image: "images/article_header_image.png"
 author_avatar: "images/avatar.png"
 date: 2020-05-06T11:35:58+05:30
-draft: true
+draft: false
 author: "Bill Fritsch"
 Tags: ["first"]
 type: "post"
