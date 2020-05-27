@@ -11,6 +11,10 @@ const SELECTORS = {
   NAVIGATION_LINKS: '.js-nav-link',
   SUBNAVIGATION_LINKS: '.js-subnav-link',
   PAGE_SECTION: '.js-section',
+  MOBILE_NAVIGATION_LINK: '.js-mobile-nav-link',
+  MOBILE_NAVIGATION: '.js-mobile-navigation',
+  CLOSE_BTN: '.js-close-btn',
+  MOBILE_NAVIGATION_LIST_ITEM: '.js-mobile-list-item',
 }
 
 /**
@@ -32,20 +36,47 @@ class Main {
     this.navigationLinks = [...document.querySelectorAll(SELECTORS.NAVIGATION_LINKS)];
     this.subnavigationLinks = [...document.querySelectorAll(SELECTORS.SUBNAVIGATION_LINKS)];
     this.section = document.querySelector(SELECTORS.PAGE_SECTION);
+    this.mobileNavigationLink = document.querySelector(SELECTORS.MOBILE_NAVIGATION_LINK);
+    this.mobileNavigation = document.querySelector(SELECTORS.MOBILE_NAVIGATION);
+    this.closeButton = document.querySelector(SELECTORS.CLOSE_BTN);
+    this.mobileNavigationListItems = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_LIST_ITEM)];
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
-    // this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
+    this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
+    this.openNavigation = this.openNavigation.bind(this);
+    this.closeNavigation = this.closeNavigation.bind(this);
 
     this.init();
   }
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
+      this.mobileNavigationLink.addEventListener("click", this.openNavigation);
+      this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", () => {
         this.handleScrollDown(this.navigationLinks);
+        this.handleSubnavigationHighlight();
       });
+      this.mobileNavigationListItems.forEach((item) => {
+        item.addEventListener("click", this.closeNavigation);
+      })
     });
   }
+
+  /**
+   * Open the mobile navigation menu
+   */
+  openNavigation() {
+    this.mobileNavigation.style.width = "100%";
+  }
+
+  /**
+   * Close the mobile navigation
+   */
+  closeNavigation() {
+    this.mobileNavigation.style.width = "0%";
+  }
+
 
   /**
    * Adds "show" class to navigation
@@ -88,22 +119,21 @@ class Main {
 
   /**
    * Handle subnavigation highlighting
-   * TODO: ABSTRACT THIS FUNCTION TO WORK FOR BOTH
    */
 
-  //  handleSubnavigationHighlight() {
-  //    let fromTop = window.scrollY;
-  //    this.subnavigationLinks.forEach(link => {
-  //      let sectionHash = document.querySelector(link.hash);
-  //      if (sectionHash != null) {
-  //        if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
-  //          link.classList.add(CLASSES.ACTIVE);
-  //        } else {
-  //          link.classList.remove(CLASSES.ACTIVE);
-  //        }
-  //      }
-  //    })
-// }
+   handleSubnavigationHighlight() {
+     let fromTop = window.scrollY;
+     this.subnavigationLinks.forEach(link => {
+       let sectionHash = document.querySelector(link.hash);
+       if (sectionHash != null) {
+         if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
+           link.classList.add(CLASSES.ACTIVE);
+         } else {
+           link.classList.remove(CLASSES.ACTIVE);
+         }
+       }
+     })
+}
 }
 
 new Main();

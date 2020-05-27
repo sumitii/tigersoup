@@ -52,26 +52,70 @@
 NAVIGATION CSS
 **/
 
-.side-nav {
-  display: none;
-}
-
 .side-nav__link {
   color: #000 !important;
   display: block;
   text-decoration: none;
 }
 
+.side-nav__link--main {
+  color: #000 !important;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .navigation-list {
+  font-size: 12px;
   list-style: none;
 }
 
 .navigation-list__subnav {
-  margin-top: 24px;
+  margin: 18px 0;
+  padding-left: 18px;
+  width: 200px;
 }
 
 .subnav-list-item {
   margin-bottom: 12px;
+}
+
+.mobile-nav-icon {
+  width: 32px;
+}
+
+.mobile-navigation {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.close-btn {
+  margin: 54px 18px 0 0;
+}
+
+.overlay-content {
+  margin-top: 168px;
+}
+
+.mobile-nav-list {
+  list-style: none;
+}
+
+.mobile-nav-list-item {
+  margin-bottom: 48px;
+}
+
+.mobile-nav-link {
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 /**
@@ -82,18 +126,20 @@ MODIFYING CLASSES
 }
 
 .-show {
-  display: block;
+  display: block !important;
 }
 
 .-hide {
   display: none;
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 320px) {
   .intro-copy {
     font-size: 24px;
   }
+}
 
+@media screen and (min-width: 768px) {
   .side-nav {
     position: fixed;
     top: 50px;
