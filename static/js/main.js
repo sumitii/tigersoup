@@ -125,6 +125,7 @@ class Main {
      let fromTop = window.scrollY;
      this.subnavigationLinks.forEach(link => {
        let sectionHash = document.querySelector(link.hash);
+       console.log(sectionHash);
        if (sectionHash != null) {
          if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
            link.classList.add(CLASSES.ACTIVE);

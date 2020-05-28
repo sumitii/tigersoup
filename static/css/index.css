@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .intro-copy {
   margin-top: 48px;
 }

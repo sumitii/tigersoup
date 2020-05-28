@@ -9,6 +9,13 @@
         <li class="subnav-list-item"><a href="#ts-challenges" class="side-nav__link js-subnav-link">3 challenges that need Tiger Soup</a></li>
       </ul>
     </li>
-    <li><a href="#articles" class="side-nav__link--main js-nav-link">Articles</a></li>
+    <li>
+      <a href="#articles" class="side-nav__link--main js-nav-link">Articles</a>
+      <ul class="navigation-list navigation-list__subnav">
+        {{ range where .Site.RegularPages "Type" "post" }}
+        <li class="subnav-list-item"><a href="#{{ .Params.id }}" class="side-nav__link js-subnav-link">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </li>
   </ul>
 </div>
