@@ -57,7 +57,7 @@ NAVIGATION CSS
 **/
 
 .side-nav__link {
-  color: #000 !important;
+  color: #fff;
   display: block;
   text-decoration: none;
 }
@@ -69,7 +69,7 @@ NAVIGATION CSS
 }
 
 .navigation-list {
-  font-size: 12px;
+  font-size: 14px;
   list-style: none;
 }
 
@@ -152,6 +152,14 @@ MEDIA QUERIES
     position: fixed;
     top: 50px;
     z-index: 1;
+  }
+
+  .side-nav__link {
+    color: #000;
+  }
+
+  .navigation-list {
+    font-size: 12px;
   }
 
   .mobile-navigation-wrapper {
