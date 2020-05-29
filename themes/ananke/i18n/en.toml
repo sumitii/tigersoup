@@ -17,7 +17,7 @@ other = "What's in this {{ .Type }}"
 other = "Related"
 
 [yourName]
-other = "Your Name"
+other = "Full name"
 
 [emailAddress]
 other = "Email Address"

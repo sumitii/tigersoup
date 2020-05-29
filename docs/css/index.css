@@ -52,6 +52,20 @@ html {
   margin-right: 8px;
 }
 
+.message-textarea {
+  border: solid 1px #000;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-list-item {
+  align-items: center;
+  display: flex;
+}
+
 /**
 NAVIGATION CSS
 **/

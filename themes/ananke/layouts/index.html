@@ -3,7 +3,7 @@
   <h3>{{ .Params.introductory_copy }}</h3>
 </div>
 <div class="hero-image">
-  <img src="{{ .Params.hero_image }}" />
+  <img src="{{ .Params.featured_image }}" />
 </div>
 {{ partial "vertical-navigation.html" . }}
 <section id="about" class="js-section">
@@ -47,6 +47,8 @@
     </div>
   {{ end }}
 </section>
-
+<section id="contact" class="js-section">
+  {{ .Content }}
+</section>
 {{ end }}
 
