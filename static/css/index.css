@@ -58,8 +58,21 @@ html {
   margin-right: 8px;
 }
 
+.article-image-wrapper {
+  margin: 0 auto;
+}
+
 .message-textarea {
   border: solid 1px #000;
+  resize: none;
+}
+
+.contact-form-wrapper {
+  flex-direction: column;
+}
+
+.contact-form-content {
+  width: 100%;
 }
 
 .contact-list {
@@ -197,6 +210,14 @@ MEDIA QUERIES
 
   .contact-link-wrapper {
     display: inline-block;
+  }
+
+  .contact-form-wrapper {
+    flex-direction: row;
+  }
+
+  .contact-form-content {
+    width: 50%;
   }
 
   .text-wrapper,
