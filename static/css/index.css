@@ -6,8 +6,14 @@ html {
   margin-top: 48px;
 }
 
-.hero-image {
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
   z-index: -1;
+}
+
+.hero-image {
+  width: 100vw;
 }
 
 .copy-par {
@@ -162,8 +168,17 @@ MEDIA QUERIES
 }
 
 @media screen and (min-width: 768px) {
+  .hero-image-wrapper {
+    justify-content: flex-end;
+  }
+
+  .hero-image {
+    width: 62vw;
+  }
+
   .side-nav {
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     top: 50px;
     z-index: 1;
   }
@@ -186,7 +201,8 @@ MEDIA QUERIES
 
   .text-wrapper,
   .ts-challenges__text-wrapper,
-  .article__text-wrapper {
+  .article__text-wrapper,
+  .article-image-wrapper {
     padding-left: 33%;
   }
 }

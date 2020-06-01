@@ -1,9 +1,11 @@
 {{ define "main" }}
-<div class="intro-copy tc tl-ns w-100 w-60-ns ph5">
-  <h3>{{ .Params.introductory_copy }}</h3>
-</div>
-<div class="hero-image">
-  <img src="{{ .Params.featured_image }}" />
+<div class="intro-wrapper">
+  <div class="intro-copy tc tl-ns w-100 w-60-ns ph5">
+    <h3>{{ .Params.introductory_copy }}</h3>
+  </div>
+  <div class="hero-image-wrapper">
+    <img class="hero-image" src="{{ .Params.featured_image }}" />
+  </div>
 </div>
 {{ partial "vertical-navigation.html" . }}
 <section id="about" class="js-section">
@@ -23,10 +25,10 @@
 <section id="articles" class="js-section">
   {{ range where .Site.RegularPages "Type" "post"}}
     <div id="{{ .Params.id }}">
-      <div class="artcle-image-wrapper pt6 w-75 fr">
+      <div class="article-image-wrapper pt6 w-75">
         <img src="{{ .Params.featured_image }}" />
       </div>
-      <div class="section-wrapper flex flex-column w-100 pa4">
+      <div class="section-wrapper flex flex-column w-100 pa4 pa6-l">
         <div class="article__text-wrapper f4 lh-copy ml0">
           <div class="title-wrapper">
             <h3 class="article-title">{{ .Title }}</h3>

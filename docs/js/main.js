@@ -95,7 +95,6 @@ class Main {
     this.navigation.classList.remove(CLASSES.SHOW);
   }
   
-  
   /**
    * Handle active scrolling and displaying navigation
    */
