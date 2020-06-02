@@ -1,6 +1,6 @@
 {{ define "main" }}
-<div class="intro-wrapper">
-  <div class="intro-copy tc tl-ns w-100 w-60-ns ph5">
+<div class="intro-wrapper flex justify-between items-center">
+  <div class="intro-copy tc tl-ns">
     <h3>{{ .Params.introductory_copy }}</h3>
   </div>
   <div class="hero-image-wrapper">
@@ -10,17 +10,14 @@
 {{ partial "vertical-navigation.html" . }}
 <div class="content-wrapper ph4 ph4-m ph6-ns">
   <section id="about" class="js-section">
+    <div id="our-approach" class="section-wrapper flex pt6">
+      {{ partial "our-approach.html" }}
+    </div>
+    <div id="our-company" class="section-wrapper flex flex-column pt6">
+      {{ partial "our-company.html" (dict "introductory_copy" "Leadership" "featured_image" "images/bill_fristch.png")}}
+    </div>
     <div id="our-story" class="section-wrapper flex pt6">
-      {{ partial "our-story.html" (dict "introductory_copy" "When making tiger soup, it is best to first focus on catching a tiger." "featured_image" "images/chef.png" )}}
-    </div>
-    <div id="who-we-are" class="section-wrapper flex pt6">
-      {{ partial "who-we-are.html" (dict "introductory_copy" "Long ago, there was a King and his favorite chef." "featured_image" "images/who-we-are.png" )}}
-    </div>
-    <div id="leadership" class="section-wrapper flex pt6">
-      {{ partial "leadership.html" (dict "introductory_copy" "Some intro copy needs to go here." "featured_image" "images/bill_fristch.png")}}
-    </div>
-    <div id="ts-challenges" class="section-wrapper flex pt6">
-      {{ partial "ts-challenges.html" (dict "featured_image" "images/tiger_hunt.png")}}
+      {{ partial "our-story.html" (dict "introductory_copy" "Long ago, there was a King and his favorite chef." "featured_image" "images/who-we-are.png" )}}
     </div>
   </section>
   <section id="articles" class="js-section">
