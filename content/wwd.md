@@ -5,9 +5,7 @@ draft: false
 what_we_do_intro: "Tiger Soup custom assembles remote teams of creative leaders around the world to swiftly solve unique marketing challenges that current resources cannot solve either through lack of available time or lack of experience."
 ---
 
-The new reality facing companies is that markets have shrunk and winning now requires taking a new kind of fight to the marketplace. Like catching  a tiger, this can be a tough
-
-undertaking. One that takes special skills and deep understanding of  the dynamics of industry segments. Stealing customers from competitors as they grow ever-more aggressive in attempting to do the same thing to you will be the name of the game.
+The new reality facing companies is that markets have shrunk and winning now requires taking a new kind of fight to the marketplace. Like catching  a tiger, this can be a tough undertaking. One that takes special skills and deep understanding of  the dynamics of industry segments. Stealing customers from competitors as they grow ever-more aggressive in attempting to do the same thing to you will be the name of the game.
 
 Marketplace success now depends on the ability to move quickly, outthink your competition and steal the show through powerful work that pulses throughout the marketplace. Plus creating new customer relationships earned through effective strategy, smart decisions and brilliant execution. Out-thinking competitors every step of the way will be the new dynamic.
 
