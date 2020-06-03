@@ -126,6 +126,10 @@ body {
   width: 18px;
 }
 
+.submit-button {
+  border-color: #000;
+}
+
 .leadership__quote {
   font-size: 18px;
   font-style: italic;
