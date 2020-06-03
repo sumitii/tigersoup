@@ -28,12 +28,20 @@
   color: #245f64;
 }
 
+.orange-500 {
+  color: #ce5833;
+}
+
 .ringside {
   font-family: 'Ringside';
 }
 
 .chronicle {
   font-family: 'Chronicle Text G4';
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -113,6 +121,10 @@ body {
 .contact-list-item {
   align-items: center;
   display: flex;
+}
+
+.contact-image {
+  width: 18px;
 }
 
 .leadership__quote {
@@ -218,9 +230,6 @@ MODIFYING CLASSES
   display: none;
 }
 
-.highlight-color {
-  color: #ce5833;
-}
 
 .initial-letter {
   color: #245F64;
