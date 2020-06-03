@@ -11,13 +11,25 @@
 <div class="content-wrapper ph4 ph4-m ph6-ns">
   <section id="about" class="js-section">
     <div id="our-approach" class="section-wrapper flex pt6">
-      {{ partial "our-approach.html" }}
+      {{ with .Site.GetPage "approach" }}
+      {{ partial "our-approach" . }}
+      {{ end }}
     </div>
     <div id="our-company" class="section-wrapper flex flex-column pt6">
-      {{ partial "our-company.html" (dict "introductory_copy" "Leadership" "featured_image" "images/bill_fristch.png")}}
+      {{ with .Site.GetPage "wwd" }}
+      {{ partial "what-we-do" . }}
+      {{ end }}
+      {{ with .Site.GetPage "resources" }}
+      {{ partial "resources" . }}
+      {{ end }}
+      {{ with .Site.GetPage "leadership" }}
+      {{ partial "leadership" . }}
+      {{ end }}
     </div>
     <div id="our-story" class="section-wrapper flex pt6">
-      {{ partial "our-story.html" (dict "introductory_copy" "Long ago, there was a King and his favorite chef." "featured_image" "images/who-we-are.png" )}}
+      {{ with .Site.GetPage "story" }}
+      {{ partial "our-story" . }}
+      {{ end }}
     </div>
   </section>
   <section id="articles" class="js-section">

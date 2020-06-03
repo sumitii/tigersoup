@@ -1,0 +1,35 @@
+<div class="leadership w-100">
+    <div class="leadership-image-wrapper fr mw-100 mr0 mr3-ns">
+      <img src="images/bill_fristch.png" />
+    </div>
+    <div class="text-wrapper fl w-100">
+      <h3 class="header-text green-800 f2 mb4 w-100">{{ .Title }}</h3>
+      <div class="measure-wide f4 lh-copy ml0">
+        <p class="f3 grey-900">{{ .Params.leadership_intro }}</p>
+        <div class="leadership__quote chronicle green-800">{{ .Params.leadership_quote }}</div>
+        <div class="leadership__contact orange-500"><img class="mr1" src="{{ .Params.email_icon }}"/>{{ .Params.email_address }}</div>
+        <p class="leadership__copy ringside f4 lh-copy grey-900"> {{ .Params.leadership_main_copy }}</p>
+        <div class="leadership__thought-starter-wrapper">
+          <h2 class="f3 grey-900 b ringside">Three challenges that may require some Tiger Soup:</h2>
+          <div class="f3 fw4 chronicle grey-900">
+            {{ .Content }}
+          </div>
+          
+          <!-- <ol class="leadership__challenges-list f3 chronicle grey-900">
+            <li>
+              <h3 class="leadership__challenges-list-item f3 chronicle grey-900"></h3>
+              <p class="leadership__copy-par"></p>
+            </li>
+            <li>
+              <h3 class="leadership__challenges-list-item f3 chronicle grey-900"></h3>
+              <p class="leadership__copy-par"></p>
+            </li>
+            <li>
+              <h3 class="leadership__challenges-list-item f3 chronicle grey-900">Commodity Perception</h3>
+              <p class="leadership__copy-par"></p>
+            </li>
+          </ol> -->
+        </div>
+      </div>
+    </div>
+  </div>

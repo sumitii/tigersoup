@@ -135,17 +135,36 @@ body {
   font-style: italic;
 }
 
-.leadership__challenges-list-item {
-  font-weight: 200;
+.leadership__thought-starter-wrapper ol {
+  padding-left: 22px;
 }
 
-.leadership__copy-par {
+.leadership__thought-starter-wrapper h3 {
+  font-weight: 400;
+}
+
+.leadership__thought-starter-wrapper p {
   font-size: 18px;
+}
+
+.leadership__challenges-list-item {
+  font-weight: 200;
 }
 
 .resources-list {
   list-style: none;
   padding: 0;
+}
+
+.our-story__copy h2 {
+  color: #245f64;
+  font-family: 'Quarto';
+  font-weight: 600;
+}
+
+.our-story__copy h3 {
+  color: #434242;
+  font-weight: 400;
 }
 
 /**
