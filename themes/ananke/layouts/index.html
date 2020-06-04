@@ -9,7 +9,7 @@
 </div>
 {{ partial "vertical-navigation.html" . }}
 <div class="content-wrapper ph4 ph4-m ph6-ns">
-  <section id="about" class="js-section">
+  <section id="about" class="section-main js-section">
     <div id="our-approach" class="section-wrapper flex pt6">
       {{ with .Site.GetPage "approach" }}
       {{ partial "our-approach" . }}
@@ -32,7 +32,7 @@
       {{ end }}
     </div>
   </section>
-  <section id="articles" class="js-section">
+  <section id="articles" class="section-main js-section">
     {{ range where .Site.RegularPages "Type" "post"}}
       <div id="{{ .Params.id }}">
         <div class="article-image-wrapper pt6 w-75">
@@ -59,7 +59,7 @@
       </div>
     {{ end }}
   </section>
-  <section id="contact" class="js-section pt6">
+  <section id="contact" class="section-main js-section pt6">
     {{ .Content }}
   </section>
 </div>

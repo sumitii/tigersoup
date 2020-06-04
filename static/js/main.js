@@ -2,6 +2,7 @@
  * @fileoverview Handles all interactions on the navigation drawer.
  */
 
+
 /**
 * JS selectors
 * @enum {string}
@@ -22,6 +23,7 @@ const SELECTORS = {
 * @enum {string}
 */
 const CLASSES = {
+  ANIMATE_UP: "-animateup",
   ACTIVE: "-active",
   SHOW: '-show',
   HIDE: '-hide',
@@ -35,7 +37,7 @@ class Main {
     this.navigation = document.querySelector(SELECTORS.NAVIGATION);
     this.navigationLinks = [...document.querySelectorAll(SELECTORS.NAVIGATION_LINKS)];
     this.subnavigationLinks = [...document.querySelectorAll(SELECTORS.SUBNAVIGATION_LINKS)];
-    this.section = document.querySelector(SELECTORS.PAGE_SECTION);
+    this.section = [...document.querySelectorAll(SELECTORS.PAGE_SECTION)];
     this.mobileNavigationLink = document.querySelector(SELECTORS.MOBILE_NAVIGATION_LINK);
     this.mobileNavigation = document.querySelector(SELECTORS.MOBILE_NAVIGATION);
     this.closeButton = document.querySelector(SELECTORS.CLOSE_BTN);
@@ -43,6 +45,7 @@ class Main {
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
+    this.isElementInViewport = this.isElementInViewport.bind(this);
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
 
@@ -53,10 +56,9 @@ class Main {
     document.addEventListener('DOMContentLoaded', () => {
       this.mobileNavigationLink.addEventListener("click", this.openNavigation);
       this.closeButton.addEventListener("click", this.closeNavigation);
-      window.addEventListener("scroll", () => {
-        this.handleScrollDown(this.navigationLinks);
-        this.handleSubnavigationHighlight();
-      });
+      window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
+      window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
+      window.addEventListener("scroll", _.throttle(this.isElementInViewport, 100));
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
       })
@@ -75,6 +77,20 @@ class Main {
    */
   closeNavigation() {
     this.mobileNavigation.style.width = "0%";
+  }
+
+  /**
+   * Add animation class to element as it scrolls into viewport
+   */
+  isElementInViewport() {
+    this.section.forEach(el => {
+      let positionFromTop = el.getBoundingClientRect().top + 200;
+      if (positionFromTop - window.innerHeight <= 0) {
+        el.classList.add(CLASSES.ANIMATE_UP);
+      } else {
+        el.classList.remove(CLASSES.ANIMATE_UP);
+      }
+    });
   }
 
 
@@ -98,10 +114,10 @@ class Main {
   /**
    * Handle active scrolling and displaying navigation
    */
-  handleScrollDown(navLinks) {
+  handleScrollDown() {
     let fromTop = window.scrollY;
     let shouldHide = true;
-    navLinks.forEach(link => {
+    this.navigationLinks.forEach(link => {
       let section = document.querySelector(link.hash);
       if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
         shouldHide = false;

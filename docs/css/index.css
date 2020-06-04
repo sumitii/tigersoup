@@ -74,6 +74,15 @@ body {
   margin: 0 auto;
 }
 
+.content-wrapper {
+  display: inline-block;
+}
+
+.section-main {
+  opacity: 0;
+  transition: opacity .6s ease-out,transform .4s ease-in-out;
+}
+
 .article-title {
   margin: 0;
 }
@@ -240,12 +249,18 @@ NAVIGATION CSS
 /**
 MODIFYING CLASSES
 **/
+
+.-animateup {
+  opacity: 1;
+  transform: translateZ(0) scale(1);
+}
+
 .-active {
   font-weight: bold;
 }
 
 .-show {
-  display: block !important;
+  display: inline-block;
 }
 
 .-hide {
