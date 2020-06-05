@@ -1,7 +1,7 @@
 {{ $.Scratch.Add "labelClasses" "f7 b db mb1 mt3 sans-serif mid-gray ttu tracked" }}
 {{ $.Scratch.Add "inputClasses" "w-100 f5 pv2 ph2 bb bt-0 br-0 bl-0" }}
 
-<div class="section-wrapper text-wrapper contact-form-wrapper flex flex-column w-100">
+<div class="section-wrapper contact-form-wrapper flex flex-column w-100">
   <div class="contact-form-content">
     <h3 class="f2 green-800">Say Hello</h3>
     <p class="contact-form-intro grey-900 chronicle">We would love to hear from you about the challenges you or your organization is facing. Another point of view never hurts. There is absolutely no obligation if you contact us.</p>
@@ -15,7 +15,7 @@
       </ul>
     </div>
   </div>
-  <div class="contact-form-content measure ph3 f4 lh-copy ml0">
+  <div class="contact-form-content measure f4 lh-copy ml0">
     <form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
   
       <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">{{ i18n "yourName" }}</label>

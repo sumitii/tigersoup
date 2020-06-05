@@ -180,6 +180,11 @@ body {
 NAVIGATION CSS
 **/
 
+.side-nav {
+  display: none;
+  opacity: 0;
+}
+
 .side-nav__link {
   color: #fff;
   display: block;
@@ -260,7 +265,7 @@ MODIFYING CLASSES
 }
 
 .-show {
-  display: inline-block;
+  opacity: 1;
 }
 
 .-hide {
@@ -300,6 +305,8 @@ MEDIA QUERIES
   }
 
   .side-nav {
+    align-self: flex-start;
+    display: flex;
     position: sticky;
     position: -webkit-sticky;
     top: 50px;
