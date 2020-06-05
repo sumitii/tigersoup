@@ -52,15 +52,6 @@ body {
   flex-direction: column;
 }
 
-.intro-copy {
-  width: 60%;
-}
-
-.hero-image-wrapper {
-  width: 100%;
-  z-index: -1;
-}
-
 .hero-image {
   width: 100vw;
 }
@@ -87,19 +78,12 @@ body {
   margin: 0;
 }
 
-.article-subheading {
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 14px;
-  letter-spacing: 0.01em;
-  line-height: 14px;
-}
-
 .article-author-wrapper {
   align-items: center;
   flex-direction: row;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.01em;
-  line-height: 16px;
+  line-height: 18px;
   margin-top: 14px;
 }
 
@@ -137,6 +121,10 @@ body {
 
 .submit-button {
   border-color: #000;
+}
+
+.leadership-image-wrapper {
+  margin-top: -50px;
 }
 
 .leadership__quote {
@@ -283,25 +271,9 @@ MODIFYING CLASSES
 MEDIA QUERIES
 **/
 
-@media screen and (min-width: 320px) {
-  .intro-copy {
-    color: #245F64;
-    font-size: 32px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .intro-wrapper {
     flex-direction: row;
-  }
-
-  .intro-copy {
-    padding-right: 4rem;
-    width: 40%;
-  }
-
-  .hero-image-wrapper {
-    width: 60%;
   }
 
   .side-nav {
@@ -327,12 +299,5 @@ MEDIA QUERIES
 
   .contact-link-wrapper {
     display: inline-block;
-  }
-
-  .text-wrapper,
-  .ts-challenges__text-wrapper,
-  .article__text-wrapper,
-  .article-image-wrapper {
-    padding-left: 33%;
   }
 }

@@ -45,7 +45,6 @@ class Main {
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
-    this.isElementInViewport = this.isElementInViewport.bind(this);
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
 
@@ -58,7 +57,6 @@ class Main {
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
-      window.addEventListener("scroll", _.throttle(this.isElementInViewport, 100));
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
       })
@@ -78,21 +76,6 @@ class Main {
   closeNavigation() {
     this.mobileNavigation.style.width = "0%";
   }
-
-  /**
-   * Add animation class to element as it scrolls into viewport
-   */
-  isElementInViewport() {
-    this.section.forEach(el => {
-      let positionFromTop = el.getBoundingClientRect().top + 200;
-      if (positionFromTop - window.innerHeight <= 0) {
-        el.classList.add(CLASSES.ANIMATE_UP);
-      } else {
-        el.classList.remove(CLASSES.ANIMATE_UP);
-      }
-    });
-  }
-
 
   /**
    * Adds "show" class to navigation
@@ -123,8 +106,10 @@ class Main {
         shouldHide = false;
         this.displayNavigation();
         link.classList.add(CLASSES.ACTIVE);
+        section.classList.add(CLASSES.ANIMATE_UP);
       } else {
-        link.classList.remove(CLASSES.ACTIVE);  
+        link.classList.remove(CLASSES.ACTIVE);
+        section.classList.remove(CLASSES.ANIMATE_UP);
       }
     });
     if (shouldHide) {
