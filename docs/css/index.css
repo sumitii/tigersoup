@@ -40,6 +40,11 @@
   font-family: 'Chronicle Text G4';
 }
 
+.sm-icon {
+  vertical-align: middle;
+  width: 20px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -91,10 +96,6 @@ body {
   margin-right: 8px;
 }
 
-.article-image-wrapper {
-  margin: 0 auto;
-}
-
 .message-textarea {
   border: solid 1px #000;
   resize: none;
@@ -115,16 +116,20 @@ body {
   display: flex;
 }
 
-.contact-image {
-  width: 18px;
-}
-
 .submit-button {
-  border-color: #000;
+  background: #fff;
+  border: solid 1px #CE5833;
+  border-width: 1px;
 }
 
 .leadership-image-wrapper {
-  margin-top: -50px;
+  justify-content: center;
+  max-width: 100vw;
+  padding-right: 0;
+}
+
+.leadership-image-wrapper img {
+  width: 85%;
 }
 
 .leadership__quote {
@@ -152,7 +157,7 @@ body {
   background: #f7f7f7;
   left: 50%;
   position: relative;
-  margin: 12vw -50vw;
+  margin: 12vw 0 12vw -50vw;
   padding-left: 2rem;
   padding-right: 2rem;
   right: 50%;
@@ -162,6 +167,18 @@ body {
 .resources-list {
   list-style: none;
   padding: 0;
+}
+
+.article-image-wrapper,
+.our-story .image-wrapper {
+  margin: 0 auto;
+}
+
+.our-approach::first-letter,
+.our-story__copy::first-letter {
+  color: #245F64;
+  font-size: 48px;
+  line-height: 44px;
 }
 
 .our-story__copy h2 {
@@ -282,13 +299,6 @@ MODIFYING CLASSES
   display: none;
 }
 
-
-.initial-letter {
-  color: #245F64;
-  font-size: 48px;
-  line-height: 44px;
-}
-
 /**
 MEDIA QUERIES
 **/
@@ -332,5 +342,14 @@ MEDIA QUERIES
 
   .contact-link-wrapper {
     display: inline-block;
+  }
+
+  .leadership-image-wrapper {
+    justify-content: end;
+    padding-right: 4rem;
+  }
+
+  .leadership-image-wrapper img {
+    width: auto;
   }
 }

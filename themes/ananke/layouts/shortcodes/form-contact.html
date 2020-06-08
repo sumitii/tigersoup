@@ -9,9 +9,9 @@
     <div class="contact-list-wrapper orange-500 ringside">
       <ul class="contact-list">
         <li class="contact-list-item mb2">
-          <object class="contact-image mr1" data="{{ .Page.Params.email_icon }}" type="image/svg+xml"><img src="{{ .Page.Params.email_icon }}" /></object>billfritsch@tigersoup.net</li>
+          <object class="sm-icon mr1" data="{{ .Page.Params.email_icon }}" type="image/svg+xml"><img src="{{ .Page.Params.email_icon }}" /></object>billfritsch@tigersoup.net</li>
         <li class="contact-list-item">
-          <object class="contact-image mr1" data="{{ .Page.Params.phone_icon }}" type="image/svg+xml"><img src="{{ .Page.Params.phone_icon }}" /></object>121-121-0121</li>
+          <object class="sm-icon mr1" data="{{ .Page.Params.phone_icon }}" type="image/svg+xml"><img src="{{ .Page.Params.phone_icon }}" /></object>121-121-0121</li>
       </ul>
     </div>
   </div>
@@ -30,7 +30,7 @@
       <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">{{ i18n "message" }}</label>
       <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4 message-textarea" aria-labelledby="message"></textarea>
   
-      <input class="submit-button w-25 mv2 orange-500 pa3" type="submit" value="{{ i18n "send" }}" />
+      <input class="submit-button w-25 mv2 ringside grey-900 pa3" type="submit" value="{{ i18n "send" }}" />
     </form>
   </div>
 </div>
