@@ -16,6 +16,7 @@ const SELECTORS = {
   MOBILE_NAVIGATION: '.js-mobile-navigation',
   CLOSE_BTN: '.js-close-btn',
   MOBILE_NAVIGATION_LIST_ITEM: '.js-mobile-list-item',
+  MOBILE_NAVIGATION_HEADER: '.js-mobile-nav-header',
 }
 
 /**
@@ -25,6 +26,7 @@ const SELECTORS = {
 const CLASSES = {
   ANIMATE_UP: "-animateup",
   ACTIVE: "-active",
+  ACTIVE_NAVIGATION: "-active-nav",
   SHOW: '-show',
   HIDE: '-hide',
 }
@@ -41,10 +43,12 @@ class Main {
     this.mobileNavigationLink = document.querySelector(SELECTORS.MOBILE_NAVIGATION_LINK);
     this.mobileNavigation = document.querySelector(SELECTORS.MOBILE_NAVIGATION);
     this.closeButton = document.querySelector(SELECTORS.CLOSE_BTN);
+    this.mobileNavigationHeader = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_HEADER)];
     this.mobileNavigationListItems = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_LIST_ITEM)];
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
+    this.setActiveNavigation = this.setActiveNavigation.bind(this);
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
 
@@ -57,9 +61,12 @@ class Main {
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
-      this.mobileNavigationListItems.forEach((item) => {
-        item.addEventListener("click", this.closeNavigation);
+      this.mobileNavigationHeader.forEach((item) => {
+        item.addEventListener("click", this.setActiveNavigation);
       })
+      this.mobileNavigationListItems.forEach((item) => {
+        item.addEventListener("click", this.closeNavigation(item));
+      });
     });
   }
 
@@ -75,6 +82,17 @@ class Main {
    */
   closeNavigation() {
     this.mobileNavigation.style.width = "0%";
+  }
+
+  /**
+   * Set the selected mobile navigation item to be active
+   */
+  setActiveNavigation(e) {
+    console.log([...document.querySelectorAll(CLASSES.ACTIVE_NAVIGATION)])
+    if (document.querySelector(CLASSES.ACTIVE_NAVIGATION) > 0) {
+      document.remove(CLASSES.ACTIVE_NAVIGATION);
+    }
+    e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
   }
 
   /**

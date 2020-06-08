@@ -173,12 +173,6 @@ NAVIGATION CSS
   opacity: 0;
 }
 
-.side-nav__link {
-  color: #fff;
-  display: block;
-  text-decoration: none;
-}
-
 .side-nav__link--main {
   color: #707070 !important;
   text-decoration: none;
@@ -211,18 +205,33 @@ NAVIGATION CSS
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 1);
   overflow-x: hidden;
   transition: 0.5s;
 }
 
-.close-btn {
-  margin: 54px 18px 0 0;
+.mobile-navigation__inner-wrapper {
+  background-color: #F7F7F7;
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
-.overlay-content {
-  margin-top: 168px;
+.mobile-nav__link {
+  display: block;
+  text-decoration: none;
+}
+
+.mobile-nav-header-list {
+  cursor: pointer;
+}
+
+.close-icon {
+  pointer-events: none;
+}
+
+.close-btn {
 }
 
 .mobile-nav-list {
@@ -233,10 +242,8 @@ NAVIGATION CSS
   margin-bottom: 48px;
 }
 
-.mobile-nav-link {
-  color: #fff !important;
+.mobile-nav__header {
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 /**
@@ -250,6 +257,10 @@ MODIFYING CLASSES
 
 .-active {
   font-weight: bold;
+}
+
+.-active-nav {
+  color: #ce5833;
 }
 
 .-show {
@@ -287,6 +298,11 @@ MEDIA QUERIES
 
   .side-nav__link {
     color: #000;
+    text-decoration: none;
+  }
+
+  .mobile-navigation {
+    display: none;
   }
 
   .navigation-list {
