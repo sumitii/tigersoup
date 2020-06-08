@@ -88,7 +88,6 @@ class Main {
    * Set the selected mobile navigation item to be active
    */
   setActiveNavigation(e) {
-    console.log([...document.querySelectorAll(CLASSES.ACTIVE_NAVIGATION)])
     if (document.querySelector(CLASSES.ACTIVE_NAVIGATION) > 0) {
       document.remove(CLASSES.ACTIVE_NAVIGATION);
     }

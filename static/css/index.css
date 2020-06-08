@@ -148,6 +148,17 @@ body {
   font-weight: 200;
 }
 
+.resources {
+  background: #f7f7f7;
+  left: 50%;
+  position: relative;
+  margin: 12vw -50vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  right: 50%;
+  width: 100vw;
+}
+
 .resources-list {
   list-style: none;
   padding: 0;
@@ -283,6 +294,12 @@ MEDIA QUERIES
 **/
 
 @media screen and (min-width: 768px) {
+  .resources {
+    left: 28%;
+    padding-left: 52%;
+    padding-right: 2rem;
+  }
+
   .intro-wrapper {
     flex-direction: row;
   }
