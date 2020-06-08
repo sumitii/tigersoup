@@ -296,7 +296,7 @@ MEDIA QUERIES
 @media screen and (min-width: 768px) {
   .resources {
     left: 28%;
-    padding-left: 52%;
+    padding-left: 48%;
     padding-right: 2rem;
   }
 
