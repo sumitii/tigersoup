@@ -44,4 +44,4 @@ Once you have `Hugo` installed `cd` into your project drive and run `hugo server
 
 
 ## Credits <a name="credits"></a>
-Built & designed by (your name/company).
+Built & designed by (Sumita Mukund/Amplified by Design).

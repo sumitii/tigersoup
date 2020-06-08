@@ -19,9 +19,8 @@
       <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
     {{ end }}
 
-    {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
-    {{ end }}
+    {{ $style := resources.Get "sass/index.scss" | toCSS | postCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
 
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}

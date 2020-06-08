@@ -36,19 +36,19 @@
     <section id="articles" class="section-main mv4 w-100 js-section">
       {{ range where .Site.RegularPages "Type" "post"}}
         <div id="{{ .Params.id }}" class="pv4">
-          <div class="article-image-wrapper">
+          <div class="article__image-wrapper">
             <img src="{{ .Params.featured_image }}" />
           </div>
           <div class="section-wrapper flex flex-column w-100 pv4">
             <div class="measure-wide f4 lh-copy ml0">
-              <div class="title-wrapper">
-                <h3 class="article-title green-800 f2">{{ .Title }}</h3>
-                <span class="article-subheading f3 lh-copy grey-500">{{ .Params.description }}</span>
-                <div class="article-author-wrapper flex">
-                  <div class="article-author-avatar">
+              <div class="article__title-wrapper">
+                <h3 class="article__title green-800 f2">{{ .Title }}</h3>
+                <span class="article__subheading f3 lh-copy grey-500">{{ .Params.description }}</span>
+                <div class="article__author-wrapper flex">
+                  <div class="article__author-avatar">
                     <img src="{{.Params.author_avatar }}" />
                   </div>
-                  <div class="article-author-information">
+                  <div class="article__author-information">
                     <div>{{ .Params.author }}</div>
                     <div>{{ .PublishDate.Format "January 2, 2006"}} / {{ math.Round (div (countwords .Content) 220.0) }} minute read</div>
                   </div>
