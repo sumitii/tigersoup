@@ -307,6 +307,10 @@ MODIFYING CLASSES
   pointer-events: none;
 }
 
+.-scroll-off {
+  overflow-y: hidden;
+}
+
 .-animateup {
   opacity: 1;
   transform: translateZ(0) scale(1);
@@ -357,8 +361,17 @@ MEDIA QUERIES
     }
   }
 
+  .contact {
+    &__link-wrapper {
+      display: inline-block;
+    }
+  }
+
   .mobile-navigation {
-    display: none;
+    &__wrapper {
+      display: none;
+    }
+    
   }
 
   .navigation-list {

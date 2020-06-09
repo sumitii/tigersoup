@@ -17,6 +17,7 @@ const SELECTORS = {
   CLOSE_BTN: '.js-close-btn',
   MOBILE_NAVIGATION_LIST_ITEM: '.js-mobile-list-item',
   MOBILE_NAVIGATION_HEADER: '.js-mobile-nav-header',
+  BODY: '.js-body',
 }
 
 /**
@@ -29,6 +30,7 @@ const CLASSES = {
   ACTIVE_NAVIGATION: "-active-nav",
   SHOW: '-show',
   HIDE: '-hide',
+  SCROLL_OFF: '-scroll-off',
 }
 
 /**
@@ -36,6 +38,7 @@ const CLASSES = {
 */
 class Main {
   constructor() {
+    this.body = document.querySelector(SELECTORS.BODY);
     this.navigation = document.querySelector(SELECTORS.NAVIGATION);
     this.navigationLinks = [...document.querySelectorAll(SELECTORS.NAVIGATION_LINKS)];
     this.subnavigationLinks = [...document.querySelectorAll(SELECTORS.SUBNAVIGATION_LINKS)];
@@ -61,12 +64,12 @@ class Main {
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
-      this.mobileNavigationHeader.forEach((item) => {
-        item.addEventListener("click", this.setActiveNavigation);
-      })
       this.mobileNavigationListItems.forEach((item) => {
-        item.addEventListener("click", this.closeNavigation(item));
+        item.addEventListener("click", this.closeNavigation);
       });
+      this.mobileNavigationHeader.forEach(node => {
+        node.addEventListener('click', this.setActiveNavigation);
+      })
     });
   }
 
@@ -75,6 +78,7 @@ class Main {
    */
   openNavigation() {
     this.mobileNavigation.style.width = "100%";
+    this.body.classList.add(CLASSES.SCROLL_OFF);
   }
 
   /**
@@ -82,15 +86,16 @@ class Main {
    */
   closeNavigation() {
     this.mobileNavigation.style.width = "0%";
+    this.body.classList.remove(CLASSES.SCROLL_OFF);
   }
 
   /**
    * Set the selected mobile navigation item to be active
    */
   setActiveNavigation(e) {
-    if (document.querySelector(CLASSES.ACTIVE_NAVIGATION) > 0) {
-      document.remove(CLASSES.ACTIVE_NAVIGATION);
-    }
+    this.mobileNavigationHeader.forEach(node => {
+      node.classList.remove(CLASSES.ACTIVE_NAVIGATION);
+    });
     e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
   }
 
