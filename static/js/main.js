@@ -18,6 +18,10 @@ const SELECTORS = {
   MOBILE_NAVIGATION_LIST_ITEM: '.js-mobile-list-item',
   MOBILE_NAVIGATION_HEADER: '.js-mobile-nav-header',
   BODY: '.js-body',
+  THOUGHT_STARTERS: '.js-thought-starters',
+  THOUGHT_STARTER_LINK: '.js-thought-starter-link',
+  READ_MORE_LINK: '.js-read-more-link',
+  WHAT_WE_DO_CONTENT: '.js-wwd-content',
 }
 
 /**
@@ -29,6 +33,7 @@ const CLASSES = {
   ACTIVE: "-active",
   ACTIVE_NAVIGATION: "-active-nav",
   SHOW: '-show',
+  DISPLAY: '-display',
   HIDE: '-hide',
   SCROLL_OFF: '-scroll-off',
 }
@@ -48,12 +53,18 @@ class Main {
     this.closeButton = document.querySelector(SELECTORS.CLOSE_BTN);
     this.mobileNavigationHeader = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_HEADER)];
     this.mobileNavigationListItems = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_LIST_ITEM)];
+    this.thoughtStarterLink = document.querySelector(SELECTORS.THOUGHT_STARTER_LINK);
+    this.readMoreLink = document.querySelector(SELECTORS.READ_MORE_LINK);
+    this.thoughtStarters = document.querySelector(SELECTORS.THOUGHT_STARTERS);
+    this.wwdContent = document.querySelector(SELECTORS.WHAT_WE_DO_CONTENT);
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
     this.setActiveNavigation = this.setActiveNavigation.bind(this);
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
+    this.displayMobileSubnavigation = this.displayMobileSubnavigation.bind(this);
+    this.toggleThoughtStarters = this.toggleThoughtStarters.bind(this);
 
     this.init();
   }
@@ -64,12 +75,18 @@ class Main {
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
+      this.readMoreLink.addEventListener("click", () => {
+        this.toggleThoughtStarters(this.wwdContent);
+      })
+      this.thoughtStarterLink.addEventListener("click", () => {
+        this.toggleThoughtStarters(this.thoughtStarters);
+      });
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
       });
       this.mobileNavigationHeader.forEach(node => {
         node.addEventListener('click', this.setActiveNavigation);
-      })
+      });
     });
   }
 
@@ -97,6 +114,25 @@ class Main {
       node.classList.remove(CLASSES.ACTIVE_NAVIGATION);
     });
     e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
+    this.displayMobileSubnavigation(e.target);
+
+  }
+
+  displayMobileSubnavigation(e) {
+    console.log(e.dataset.header);
+    this.mobileNavigationListItems.forEach(item => {
+      item.classList.remove(CLASSES.DISPLAY);
+      if (e.dataset.header === item.dataset.header) {
+        item.classList.add(CLASSES.DISPLAY);
+      }
+    })
+  }
+
+  /**
+   * Display the thought starters section
+   */
+  toggleThoughtStarters(el) {
+    el.classList.toggle(CLASSES.DISPLAY);
   }
 
   /**

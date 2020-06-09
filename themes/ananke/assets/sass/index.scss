@@ -259,6 +259,7 @@ NAVIGATION CSS
 
   &__list-item {
     margin-bottom: 48px;
+    position: absolute;
   }
 
   &__header {
@@ -326,6 +327,10 @@ MODIFYING CLASSES
 
 .-show {
   opacity: 1;
+}
+
+.-display {
+  display: block;
 }
 
 .-hide {
