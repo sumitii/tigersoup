@@ -34,6 +34,7 @@ const CLASSES = {
   ACTIVE_NAVIGATION: "-active-nav",
   SHOW: '-show',
   DISPLAY: '-display',
+  DISPLAY_MOBILE_NAV: '-display-sm',
   HIDE: '-hide',
   SCROLL_OFF: '-scroll-off',
 }
@@ -115,15 +116,13 @@ class Main {
     });
     e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
     this.displayMobileSubnavigation(e.target);
-
   }
 
   displayMobileSubnavigation(e) {
-    console.log(e.dataset.header);
     this.mobileNavigationListItems.forEach(item => {
       item.classList.remove(CLASSES.DISPLAY);
       if (e.dataset.header === item.dataset.header) {
-        item.classList.add(CLASSES.DISPLAY);
+        this.toggleReadMoreSection(item);
       }
     })
   }

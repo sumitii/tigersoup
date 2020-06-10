@@ -1,0 +1,33 @@
+.message-textarea {
+  border: solid 1px #000;
+  resize: none;
+}
+
+.contact-form {
+  &__intro {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__list-item {
+    align-items: center;
+    display: flex;
+  }
+
+  &__submit-button {
+    background: #fff;
+    border: solid 1px #CE5833;
+    border-width: 1px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__link-wrapper {
+      display: inline-block;
+    }
+  }
+}

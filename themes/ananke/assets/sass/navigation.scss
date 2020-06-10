@@ -1,0 +1,105 @@
+.navigation {
+  &__text {
+    color: $grey-500 !important;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__header {
+      display: block;
+    }
+  }
+}
+  
+.side-nav {
+  display: none;
+  opacity: 0;
+
+  &__link {
+    &--main {
+      color: $grey-500 !important;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    align-self: flex-start;
+    display: flex;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50px;
+    z-index: 1;
+
+    &__link {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
+
+.navigation-list {
+  font-size: 14px;
+  list-style: none;
+
+  &__subnav {
+    margin: 18px 0;
+    padding-left: 18px;
+    width: 200px;
+  }
+
+  &__subnav-list-item {
+    margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.mobile-navigation {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  &__inner-wrapper {
+    background-color: $beige-100;
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  &__header-list {
+    cursor: pointer;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    @include slide-down($transition-slow);
+    position: absolute;
+  }
+
+  &__header {
+    text-decoration: none;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__wrapper {
+      display: none;
+    }
+  }
+}
