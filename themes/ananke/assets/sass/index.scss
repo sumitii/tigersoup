@@ -106,6 +106,17 @@ body {
   }
 }
 
+.what-we-do {
+  &__text-wrapper {
+    overflow: hidden;
+    transition: height .75s ease;
+
+    &:not(.-display) {
+      display: none;
+    }
+  }
+}
+
 /**
 LEADERSHIP SECTION
 **/
@@ -130,8 +141,15 @@ LEADERSHIP SECTION
   }
 
   &__thought-starter-wrapper {
+    overflow: hidden;
+    transition: height .75s ease;
+
+    &:not(.-display) {
+      display: none;
+    }
+  
     ol {
-      padding-left: 22px; 
+      padding-left: 32px; 
     }
 
     h3 {
@@ -164,26 +182,35 @@ RESOURCES SECTION
   }
 }
 
-.our-story .image-wrapper {
-  margin: 0 auto;
-}
-
-.our-approach::first-letter,
-.our-story__copy::first-letter {
+.our-approach::first-letter {
   color: #245F64;
   font-size: 48px;
   line-height: 44px;
 }
 
-.our-story__copy h2 {
-  color: #245f64;
-  font-family: 'Quarto';
-  font-weight: 600;
-}
+.our-story {
+  &__copy {
+    h2 {
+      color: #245f64;
+      font-family: 'Quarto';
+      font-weight: 600;
+    }
 
-.our-story__copy h3 {
-  color: #434242;
-  font-weight: 400;
+    h3 {
+      color: #434242;
+      font-weight: 400;
+    }
+
+    .image-wrapper {
+      margin: 0 auto;
+    }
+
+    &::first-letter {
+      color: #245F64;
+      font-size: 48px;
+      line-height: 44px;
+    }
+  }
 }
 
 /**
@@ -327,10 +354,6 @@ MODIFYING CLASSES
 
 .-show {
   opacity: 1;
-}
-
-.-display {
-  display: block;
 }
 
 .-hide {

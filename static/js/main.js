@@ -64,7 +64,7 @@ class Main {
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
     this.displayMobileSubnavigation = this.displayMobileSubnavigation.bind(this);
-    this.toggleThoughtStarters = this.toggleThoughtStarters.bind(this);
+    this.toggleReadMoreSection = this.toggleReadMoreSection.bind(this);
 
     this.init();
   }
@@ -76,10 +76,10 @@ class Main {
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
       this.readMoreLink.addEventListener("click", () => {
-        this.toggleThoughtStarters(this.wwdContent);
+        this.toggleReadMoreSection(this.wwdContent);
       })
       this.thoughtStarterLink.addEventListener("click", () => {
-        this.toggleThoughtStarters(this.thoughtStarters);
+        this.toggleReadMoreSection(this.thoughtStarters);
       });
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
@@ -129,11 +129,27 @@ class Main {
   }
 
   /**
-   * Display the thought starters section
+   * Display a given section (pass in the element).
    */
-  toggleThoughtStarters(el) {
-    el.classList.toggle(CLASSES.DISPLAY);
-  }
+  toggleReadMoreSection(el) {
+    if (!el.classList.contains(CLASSES.DISPLAY)) {
+      el.classList.toggle(CLASSES.DISPLAY);
+      el.style.height = 'auto';
+
+      let height = el.clientHeight + "px";
+      el.style.height = '0px';
+      setTimeout(() => {
+        el.style.height = height;
+      }, 0);
+    } else {
+      el.style.height = '0px';
+      el.addEventListener('transitionend', () => {
+        el.classList.remove(CLASSES.DISPLAY);
+      }, {
+        once: true
+      });
+    } 
+  };
 
   /**
    * Adds "show" class to navigation
