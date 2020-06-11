@@ -7,6 +7,7 @@ $beige-100: #f7f7f7;
 $grey-500: #707070;
 $grey-900: #434242;
 $green-800: #245f64;
+$orange-500: #ce5833;
 
 @font-face {
   font-family: 'Quarto';
@@ -86,6 +87,12 @@ body {
   transition: opacity .6s ease-out, transform .4s ease-in-out;
 }
 
+.caret {
+  pointer-events: none;
+  transform: rotate(0deg);
+  transition: transform .25s linear;
+}
+
 /**
 MODIFYING CLASSES
 **/
@@ -145,6 +152,11 @@ MODIFYING CLASSES
 
 .-hide {
   display: none;
+}
+
+.-rotate {
+  transform: rotate(180deg);
+  transition: transform .25s linear;
 }
 
 .our-approach::first-letter {

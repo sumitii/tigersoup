@@ -2,7 +2,10 @@
   <h2 class="header-text green-800 f2 mb4 w-100">{{ .Title }}</h2>
   <h3 class="measure f3 grey-900 fw4">{{ .Params.what_we_do_intro }}</h3>
   <div class="leadership__link-wrapper">
-    <a class="ringside orange-500 no-underline f5 js-read-more-link" href="javascript:void(0)">{{ .Params.more_button }}</a>
+    <a class="ringside orange-500 no-underline f5 js-read-more-link" href="javascript:void(0)">
+      {{ .Params.more_button }}
+      <object class="caret sm-icon mr1 js-caret" data="{{ .Params.caret }}" type="image/svg+xml"><img src="{{ .Params.caret }}" /></object>
+    </a>
   </div>
   <div class="read-more__text-wrapper measure-wide f4 lh-copy chronicle grey-900 js-wwd-content">
     {{ .Content }}

@@ -22,6 +22,7 @@ const SELECTORS = {
   THOUGHT_STARTER_LINK: '.js-thought-starter-link',
   READ_MORE_LINK: '.js-read-more-link',
   WHAT_WE_DO_CONTENT: '.js-wwd-content',
+  CARET: '.js-caret',
 }
 
 /**
@@ -37,6 +38,7 @@ const CLASSES = {
   DISPLAY_MOBILE_NAV: '-display-sm',
   HIDE: '-hide',
   SCROLL_OFF: '-scroll-off',
+  ROTATE: '-rotate',
 }
 
 /**
@@ -58,6 +60,7 @@ class Main {
     this.readMoreLink = document.querySelector(SELECTORS.READ_MORE_LINK);
     this.thoughtStarters = document.querySelector(SELECTORS.THOUGHT_STARTERS);
     this.wwdContent = document.querySelector(SELECTORS.WHAT_WE_DO_CONTENT);
+    this.caret = [...document.querySelectorAll(SELECTORS.CARET)];
 
     this.handleScrollDown = this.handleScrollDown.bind(this);
     this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
@@ -66,6 +69,7 @@ class Main {
     this.closeNavigation = this.closeNavigation.bind(this);
     this.displayMobileSubnavigation = this.displayMobileSubnavigation.bind(this);
     this.toggleReadMoreSection = this.toggleReadMoreSection.bind(this);
+    this.toggleCaret = this.toggleCaret.bind(this);
 
     this.init();
   }
@@ -78,9 +82,11 @@ class Main {
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
       this.readMoreLink.addEventListener("click", () => {
         this.toggleReadMoreSection(this.wwdContent);
+        this.toggleCaret(this.readMoreLink);
       })
       this.thoughtStarterLink.addEventListener("click", () => {
         this.toggleReadMoreSection(this.thoughtStarters);
+        this.toggleCaret(this.thoughtStarterLink);
       });
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
@@ -126,6 +132,19 @@ class Main {
       }
     })
   }
+
+  /**
+   * Toggle caret 
+  */
+ toggleCaret(linkEl) {
+  this.caret.forEach((item) => {
+    if (!item.classList.contains(CLASSES.ROTATE) && item.parentNode == linkEl) {
+      item.classList.add(CLASSES.ROTATE);
+    } else {
+      item.classList.remove(CLASSES.ROTATE);
+    }
+  });
+ }
 
   /**
    * Display a given section (pass in the element).

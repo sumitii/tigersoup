@@ -8,6 +8,7 @@ email_address: billfritsch@tigersoup.net
 thought_starter_button: "Thought starters"
 leadership_quote: "I always encourage people to freely talk about challenges. It never hurts to get another point-of-view. There is absolutely no obligation by contacting us."
 leadership_main_copy: "His credentials include CEO of Digital Kitchen (Multiple Emmy Award winning creator of work recognized by people around the world); CEO of Cf2GS(one of the leading direct marketing agency brands in the US) and Director of Creative Services at Walt Disney (where his team helped to launch The Disney Channel and Disney Home Video."
+caret: images/caret.svg
 ---
 
 1. ### Overcapacity + Compressed Demand
