@@ -36,8 +36,8 @@ Once you have `Hugo` installed `cd` into your project drive and run `hugo server
 **Source JS files**
 `[main.js]` is the primary JS file used for this project.
 
-**CSS/SASS files**
-`[index.css]` is the primary CSS file used for this project.
+**SASS files**
+`[index.scss]` is the primary SASS file used for this project.
 
 
 

@@ -1,0 +1,44 @@
+$transition-slow: .25s;
+$transition-standard: .75s;
+$beige-100: #f7f7f7;
+$grey-500: #707070;
+$grey-900: #434242;
+$green-800: #245f64;
+$orange-500: #ce5833;
+
+@font-face {
+  font-family: 'Quarto';
+  font-style: normal;
+  src: url(static/fonts/Quarto/Quarto-Light.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Chronicle Text G4';
+  font-style: normal;
+  src: url(static/fonts/ChronicleTextG4/ChronicleTextG4-Roman-Pro.otf) format('otf');
+}
+
+@font-face {
+  font-family: 'Ringside';
+  font-style: normal;
+  src: url(static/fonts/Ringside/Ringside-Light.otf) format('otf');
+}
+
+@mixin slide-down($transition-speed) { 
+  overflow: hidden;
+  transition: height $transition-speed ease-in-out;
+
+  &:not(.-display) {
+    display: none;
+  }
+}
+
+@mixin first-letter {
+  color: $green-800;
+  font-size: 48px;
+  line-height: 44px;
+}
+
+$glide-class: 'glide' !default;
+$glide-element-separator: '__' !default;
+$glide-modifier-separator: '--' !default;

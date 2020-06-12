@@ -18,7 +18,7 @@
     
 
     
-    <link rel="stylesheet" href="/tigersoup/sass/index.min.628348e220b926c592615019302fba08554ec8f6d937251a444b20592071aa3d.css">
+    <link rel="stylesheet" href="/tigersoup/sass/index.min.e369bdaceef736880712474364e93a25264f453ae49d8d2979c938358437b13a.css">
 
     
       
@@ -65,7 +65,7 @@
       <div class="mobile-navigation__wrapper">
         <a href="javascript:void(0)" class="orange-500 ringside no-underline js-mobile-nav-link">Menu</a>
       </div>
-      <span class="navigation__header dn f6 lh-title">Enjoy your<br/><span class="orange-500 f6 lh-title">Thursday</span></span>
+      <span class="navigation__header dn f6 lh-title">Enjoy your<br/><span class="orange-500 f6 lh-title">Friday</span></span>
     </div>
   </div>
 </div>
@@ -111,14 +111,47 @@
 </header>
     <main class="pb4 ph4" role="main">
       
-<div class="intro-wrapper flex justify-between items-center mt4">
-  <div class="tc tl-ns">
-    <h2 class="f1 lh-title green-800">If you want to tiger soup, you have to catch a tiger.</h2>
-  </div>
-  <div class="hero-image__wrapper">
-    <img class="hero-image" src="images/tiger_hunt.png" />
+
+  <div class="glide">
+  <div class="mt4 glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="intro-wrapper flex justify-between items-center glide__slide">
+        <div class="tc tl-ns w-100 w-50-ns w-100-m">
+          <h2 class="hero__header f1 lh-title green-800">If you want to tiger soup, you have to catch a tiger.</h2>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="images/tiger_hunt.png" />
+        </div>
+      </li>
+      <li class="intro-wrapper flex justify-between items-center glide__slide">
+        <div class="tc tl-ns w-100 w-50-ns w-100-m">
+          <h2 class="hero__header f1 lh-title green-800">Article #1</h2>
+          <h3 class="f3 fw2 chronicle">Curabitur blandit tempus ardua ridiculus sed magna</h3>
+          <a class="orange-500 no-underline" href="#second-article">Read more</a>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="images/article_header_image.png" />
+        </div>
+      </li>
+      <li class="intro-wrapper flex justify-between items-center glide__slide">
+        <div class="tc tl-ns w-100 w-50-ns w-100-m">
+          <h2 class="hero__header f1 lh-title green-800">Article #2</h2>
+          <h3 class="f3 fw2 chronicle">Curabitur blandit tempus ardua ridiculus sed magna</h3>
+          <a class="orange-500 no-underline" href="#back-to-the-future">Read more</a>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="images/article_header_image.png" />
+        </div>
+      </li>
+    </ul>
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+      <button class="glide__bullet" data-glide-dir="=2"></button>
+    </div>
   </div>
 </div>
+
 <div class="flex justify-between">
   <div class="side-nav js-nav-links-wrapper ringside w-30">
   <ul class="navigation-list">
@@ -403,6 +436,7 @@ build the base for his tiger soup. After all, this had always been his secret of
 
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
 
   </body>
 </html>

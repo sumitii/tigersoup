@@ -1,0 +1,39 @@
+<div class="glide">
+  <div class="mt4 glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="intro-wrapper flex justify-between items-center glide__slide">
+        <div class="tc tl-ns w-100 w-50-ns w-100-m">
+          <h2 class="hero__header f1 lh-title green-800">{{ .Params.introductory_copy }}</h2>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="{{ .Params.featured_image }}" />
+        </div>
+      </li>
+      <li class="intro-wrapper flex justify-between items-center glide__slide">
+        <div class="tc tl-ns w-100 w-50-ns w-100-m">
+          <h2 class="hero__header f1 lh-title green-800">{{ .Params.article_one_header }}</h2>
+          <h3 class="f3 fw2 chronicle">{{ .Params.article_one_subheader }}</h3>
+          <a class="orange-500 no-underline" href="#second-article">{{ .Params.read_more }}</a>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="{{ .Params.article_one_image }}" />
+        </div>
+      </li>
+      <li class="intro-wrapper flex justify-between items-center glide__slide">
+        <div class="tc tl-ns w-100 w-50-ns w-100-m">
+          <h2 class="hero__header f1 lh-title green-800">{{ .Params.article_two_header }}</h2>
+          <h3 class="f3 fw2 chronicle">{{ .Params.article_two_subheader }}</h3>
+          <a class="orange-500 no-underline" href="#back-to-the-future">{{ .Params.read_more }}</a>
+        </div>
+        <div class="hero__image-wrapper">
+          <img class="hero__image" src="{{ .Params.article_two_image }}" />
+        </div>
+      </li>
+    </ul>
+    <div class="glide__bullets" data-glide-el="controls[nav]">
+      <button class="glide__bullet" data-glide-dir="=0"></button>
+      <button class="glide__bullet" data-glide-dir="=1"></button>
+      <button class="glide__bullet" data-glide-dir="=2"></button>
+    </div>
+  </div>
+</div>

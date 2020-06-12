@@ -76,6 +76,7 @@ class Main {
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
+      new Glide('.glide').mount();
       this.mobileNavigationLink.addEventListener("click", this.openNavigation);
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
