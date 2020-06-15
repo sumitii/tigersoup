@@ -76,7 +76,10 @@ class Main {
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
-      new Glide('.glide').mount();
+      new Glide('.glide', {
+        autoplay: 2000,
+        type: 'carousel',
+      }).mount();
       this.mobileNavigationLink.addEventListener("click", this.openNavigation);
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
@@ -174,9 +177,7 @@ class Main {
    * Adds "show" class to navigation
    */
   displayNavigation() {
-    if (!this.navigation.classList.contains(CLASSES.SHOW)) {
-      this.navigation.classList.add(CLASSES.SHOW);
-    }
+    this.navigation.classList.add(CLASSES.SHOW);
   }
 
   /**
@@ -193,6 +194,7 @@ class Main {
   handleScrollDown() {
     let shouldHide = true;
     let fromTop = window.scrollY;
+
     this.navigationLinks.forEach(link => {
       let section = document.querySelector(link.hash);
       if (
