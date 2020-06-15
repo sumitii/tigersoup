@@ -191,18 +191,19 @@ class Main {
    * Handle active scrolling and displaying navigation
    */
   handleScrollDown() {
-    let fromTop = window.scrollY;
     let shouldHide = true;
+    let fromTop = window.scrollY;
     this.navigationLinks.forEach(link => {
       let section = document.querySelector(link.hash);
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+      if (
+        section.getBoundingClientRect().y <= fromTop &&
+        section.offsetTop + section.getBoundingClientRect().height > fromTop
+      ) {
         shouldHide = false;
-        this.displayNavigation();
         link.classList.add(CLASSES.ACTIVE);
-        section.classList.add(CLASSES.ANIMATE_UP);
+        this.displayNavigation();
       } else {
         link.classList.remove(CLASSES.ACTIVE);
-        section.classList.remove(CLASSES.ANIMATE_UP);
       }
     });
     if (shouldHide) {
