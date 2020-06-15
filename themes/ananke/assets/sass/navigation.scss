@@ -11,9 +11,7 @@
 }
   
 .side-nav {
-  opacity: 0;
-  transition: opacity 0.3s, visibility 0.3s;
-  visibility: hidden;
+  display: none;
 
   &__link {
     &--main {
@@ -30,6 +28,7 @@
     position: sticky;
     position: -webkit-sticky;
     top: 50px;
+    transition: opacity 0.3s, visibility 0.3s;
     visibility: hidden;
     z-index: 1;
 

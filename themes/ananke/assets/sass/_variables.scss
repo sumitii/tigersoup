@@ -9,19 +9,31 @@ $orange-500: #ce5833;
 @font-face {
   font-family: 'Quarto';
   font-style: normal;
-  src: url(static/fonts/Quarto/Quarto-Light.otf) format('otf');
+  src: url('../fonts/Quarto/Quarto-Light.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Chronicle Text G4';
   font-style: normal;
-  src: url(static/fonts/ChronicleTextG4/ChronicleTextG4-Roman-Pro.otf) format('otf');
+  src: url('../fonts/ChronicleTextG4/ChronicleTextG4-Roman-Pro.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'Ringside';
   font-style: normal;
-  src: url(static/fonts/Ringside/Ringside-Light.otf) format('otf');
+  src: url('../fonts/Ringside/Ringside-Semibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Ringside Light';
+  font-style: normal;
+  src: url('../fonts/Ringside/Ringside-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Ringside Book';
+  font-style: normal;
+  src: url('../fonts/Ringside/Ringside-Book.otf') format('opentype');
 }
 
 @mixin slide-down($transition-speed) { 

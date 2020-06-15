@@ -4,10 +4,13 @@
   </div>
   <h3 class="header-text green-800 f2 mb4">{{ .Title }}</h3>
   <div class="measure-wide f4 lh-copy ml0">
-    <p class="f3 grey-900">{{ .Params.leadership_intro }}</p>
+    <p class="chronicle grey-900 f3">{{ .Params.leadership_intro }}</p>
     <div class="mb4 mb3-ns leadership__quote chronicle green-800">{{ .Params.leadership_quote }}</div>
-    <div class="leadership__contact orange-500"><img class="sm-icon mr1" src="{{ .Params.email_icon }}"/><a class="orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a></div>
-    <p class="leadership__copy ringside mt5 f4 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
+    <div class="leadership__contact orange-500">
+      <img class="sm-icon mr1" src="{{ .Params.email_icon }}"/>
+      <a class="ringside orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a>
+    </div>
+    <p class="leadership__copy ringside-light mt5 f4 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
     <div class="link-wrapper">
       <a class="ringside orange-500 no-underline f5 js-thought-starter-link" href="javascript:void(0)">
         {{ .Params.thought_starter_button }}

@@ -56,11 +56,6 @@ body {
   display: inline-block;
 }
 
-.section-main {
-  // opacity: 0;
-  // transition: opacity .6s ease-out, transform .4s ease-in-out;
-}
-
 .caret {
   pointer-events: none;
   transform: rotate(0deg);
@@ -90,6 +85,14 @@ MODIFYING CLASSES
   font-family: 'Ringside';
 }
 
+.ringside-light {
+  font-family: 'Ringside Light';
+}
+
+.ringside-book {
+  font-family: 'Ringside Book';
+}
+
 .chronicle {
   font-family: 'Chronicle Text G4';
 }
@@ -113,7 +116,7 @@ MODIFYING CLASSES
 }
 
 .-active {
-  font-weight: bold;
+  font-family: 'Ringside Light';
 }
 
 .-active-nav {
@@ -149,6 +152,7 @@ MODIFYING CLASSES
 
     h3 {
       color: $grey-900;
+      font-family: 'Chronicle Text G4';
       font-weight: 400;
     }
 
