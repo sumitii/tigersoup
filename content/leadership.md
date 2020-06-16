@@ -3,12 +3,13 @@ title: "Leadership"
 date: 2020-05-06T11:35:58+05:30
 draft: false
 leadership_intro: "Tiger Soup custom assembles remote teams of creative leaders around the world to swiftly solve unique marketing challenges that current resources cannot solve either through lack of available time or lack of experience."
-email_icon: images/email-icon.svg
+email_icon: "../images/email-icon.svg"
+leadership_image: "../images/bill_fristch.png"
 email_address: billfritsch@tigersoup.net
 thought_starter_button: "Thought starters"
 leadership_quote: "I always encourage people to freely talk about challenges. It never hurts to get another point-of-view. There is absolutely no obligation by contacting us."
 leadership_main_copy: "His credentials include CEO of Digital Kitchen (Multiple Emmy Award winning creator of work recognized by people around the world); CEO of Cf2GS(one of the leading direct marketing agency brands in the US) and Director of Creative Services at Walt Disney (where his team helped to launch The Disney Channel and Disney Home Video."
-caret: images/caret.svg
+caret: "../images/caret.svg"
 ---
 
 1. ### Overcapacity + Compressed Demand

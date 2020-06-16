@@ -4,8 +4,11 @@
       <li class="intro-wrapper flex justify-between items-center glide__slide">
         <div class="tc tl-ns w-100 w-50-ns w-100-m">
           <h2 class="hero__header f1 lh-title green-800">{{ .Params.introductory_copy }}</h2>
+          <div class="mt4">
+            <a class="orange-500 no-underline" href="about">{{ .Params.read_more }}</a>
+          </div>
         </div>
-        <div class="hero__image-wrapper">
+        <div class="hero__image-wrapper w-75 w-100-ns w-75-m">
           <img class="hero__image" src="{{ .Params.featured_image }}" />
         </div>
       </li>
@@ -13,9 +16,9 @@
         <div class="tc tl-ns w-100 w-50-ns w-100-m">
           <h2 class="hero__header f1 lh-title green-800">{{ .Params.article_one_header }}</h2>
           <h3 class="f3 fw2 chronicle">{{ .Params.article_one_subheader }}</h3>
-          <a class="orange-500 no-underline" href="#second-article">{{ .Params.read_more }}</a>
+          <a class="orange-500 no-underline" href="post/second-article">{{ .Params.read_more }}</a>
         </div>
-        <div class="hero__image-wrapper">
+        <div class="hero__image-wrapper w-75 w-100-ns w-75-m">
           <img class="hero__image" src="{{ .Params.article_one_image }}" />
         </div>
       </li>
@@ -23,9 +26,9 @@
         <div class="tc tl-ns w-100 w-50-ns w-100-m">
           <h2 class="hero__header f1 lh-title green-800">{{ .Params.article_two_header }}</h2>
           <h3 class="f3 fw2 chronicle">{{ .Params.article_two_subheader }}</h3>
-          <a class="orange-500 no-underline" href="#back-to-the-future">{{ .Params.read_more }}</a>
+          <a class="orange-500 no-underline" href="post/back-to-the-future">{{ .Params.read_more }}</a>
         </div>
-        <div class="hero__image-wrapper">
+        <div class="hero__image-wrapper w-75 w-100-ns w-75-m">
           <img class="hero__image" src="{{ .Params.article_two_image }}" />
         </div>
       </li>

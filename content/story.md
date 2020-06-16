@@ -1,6 +1,6 @@
 ---
 title: "Our story"
-featured_image: 'images/who-we-are.png'
+featured_image: '../images/who-we-are.png'
 ---
 
 Long ago, there was a King and his favorite chef. The king’s favorite chef had a 

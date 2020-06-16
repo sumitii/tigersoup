@@ -1,15 +1,32 @@
-  <div class="mb3 pa4 mid-gray overflow-hidden">
-    {{ if .Date }}
-      <div class="f6">
-        {{ .Date.Format "January 2, 2006" }}
+{{ define "main" }}
+<div class="flex justify-between">
+  {{ partial "vertical-navigation.html" . }}
+  <div class="w-70-ns w-100-m w-100">
+    <section id="articles" class="section-main mv4 w-100 js-section">
+      <div id="{{ .Params.id }}">
+        <div class="article__image-wrapper w-50">
+          <img src="{{ .Params.featured_image }}" />
+        </div>
+        <div class="section-wrapper flex flex-column w-100 pv4">
+          <div class="measure-wide f4 lh-copy ml0">
+            <div class="article__title-wrapper">
+              <h3 class="article__title green-800 f2">{{ .Title }}</h3>
+              <div class="article__subheading chronicle grey-500 f3 lh-copy mv2">{{ .Params.description }}</div>
+              <div class="article__author-wrapper flex flex-row items-center">
+                <div class="article__author-avatar">
+                  <img src="{{.Params.author_avatar }}" />
+                </div>
+                <div class="article__author-information ml2">
+                  <div>{{ .Params.author }}</div>
+                  <div>{{ .PublishDate.Format "January 2, 2006"}} / {{ math.Round (div (countwords .Content) 220.0) }} minute read</div>
+                </div>
+              </div>
+            </div>
+            <div class="chronicle">{{ .Content }}</div>
+          </div>
+        </div>
       </div>
-    {{ end }}
-    <h1 class="f3 near-black">
-      <a href="{{ .Permalink }}" class="link black dim">
-        {{ .Title }}
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      {{ .Summary  }}
-    </div>
+    </section>
   </div>
+</div>
+{{ end }}

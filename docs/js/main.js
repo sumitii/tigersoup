@@ -76,23 +76,30 @@ class Main {
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
-      new Glide('.glide', {
-        animationDuration: 0,
-        autoplay: 2000,
-        type: 'carousel',
-      }).mount();
+      if (document.querySelector('.glide')) {
+        new Glide('.glide', {
+          animationDuration: 0,
+          autoplay: 2000,
+          type: 'carousel',
+        }).mount();
+      }
       this.mobileNavigationLink.addEventListener("click", this.openNavigation);
       this.closeButton.addEventListener("click", this.closeNavigation);
       window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
       window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
-      this.readMoreLink.addEventListener("click", () => {
-        this.toggleReadMoreSection(this.wwdContent);
-        this.toggleCaret(this.readMoreLink);
-      })
-      this.thoughtStarterLink.addEventListener("click", () => {
-        this.toggleReadMoreSection(this.thoughtStarters);
-        this.toggleCaret(this.thoughtStarterLink);
-      });
+      if (this.readMoreLink) {
+        this.readMoreLink.addEventListener("click", () => {
+          this.toggleReadMoreSection(this.wwdContent);
+          this.toggleCaret(this.readMoreLink);
+        })
+      }
+      if (this.thoughtStarterLink) {
+        this.thoughtStarterLink.addEventListener("click", () => {
+          this.toggleReadMoreSection(this.thoughtStarters);
+          this.toggleCaret(this.thoughtStarterLink);
+        });
+      }
+
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
       });
@@ -193,25 +200,25 @@ class Main {
    * Handle active scrolling and displaying navigation
    */
   handleScrollDown() {
-    let shouldHide = true;
-    let fromTop = window.scrollY;
+    // let shouldHide = true;
+    // let fromTop = window.scrollY;
 
-    this.navigationLinks.forEach(link => {
-      let section = document.querySelector(link.hash);
-      if (
-        section.getBoundingClientRect().y <= fromTop &&
-        section.offsetTop + section.getBoundingClientRect().height > fromTop
-      ) {
-        shouldHide = false;
-        link.classList.add(CLASSES.ACTIVE);
-        this.displayNavigation();
-      } else {
-        link.classList.remove(CLASSES.ACTIVE);
-      }
-    });
-    if (shouldHide) {
-      this.hideNavigation();
-    }
+    // this.navigationLinks.forEach(link => {
+    //   let section = document.querySelector(link.hash);
+    //   if (
+    //     section.getBoundingClientRect().y <= fromTop &&
+    //     section.offsetTop + section.getBoundingClientRect().height > fromTop
+    //   ) {
+    //     shouldHide = false;
+    //     link.classList.add(CLASSES.ACTIVE);
+    //     this.displayNavigation();
+    //   } else {
+    //     link.classList.remove(CLASSES.ACTIVE);
+    //   }
+    // });
+    // if (shouldHide) {
+    //   this.hideNavigation();
+    // }
   }
 
   /**

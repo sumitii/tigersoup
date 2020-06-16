@@ -24,12 +24,12 @@
   @media screen and (min-width: 768px) {
     align-self: flex-start;
     display: flex;
-    opacity: 0;
+    // opacity: 0;
     position: sticky;
     position: -webkit-sticky;
     top: 50px;
-    transition: opacity 0.3s, visibility 0.3s;
-    visibility: hidden;
+    // transition: opacity 0.3s, visibility 0.3s;
+    // visibility: hidden;
     z-index: 1;
 
     &__link {

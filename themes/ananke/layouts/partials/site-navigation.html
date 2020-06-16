@@ -1,14 +1,14 @@
-<div class="navigation" role="navigation">
+<div class="navigation pt5 pb3 ph4" role="navigation">
   <div class="mw9 center">
     <div class="flex flex-row justify-between">
       <div class="w-50 w-20-ns w-25-m">
         <a href="{{ .Site.BaseURL }}" class="navigation__text fw2 no-underline">
           <span class="f6 lh-title b lh-title">
-            {{ .Title | default .Site.Title }}
+            {{ .Site.Title }}
           </span>
-          {{ with .Params.description }}
+          {{ with .Site.GetPage "_index.md" }}
             <span class="f6 lh-title center">
-              {{ . }}
+              {{ .Description }}
             </span>
           {{ end }}
         </a>
@@ -23,9 +23,11 @@
 
 <div class="js-mobile-navigation mobile-navigation bg-white">
   <div class="mobile-navigation__inner-wrapper">
+    {{ with .Site.GetPage "_index.md" }}
     <a href="javascript:void(0)" class="close-btn flex flex-row-reverse pt3 pr3 js-close-btn">
       <object class="close-icon mr1" data="{{ .Params.mobile_nav_close }}" type="image/svg+xml"><img src="{{ .Params.mobile_nav_close }}" /></object>
     </a>
+    {{ end }}
     <div class="overlay-content pt4">
       <ul class="w-75 f2 fw2 quarto green-800">
         <li class="mobile-navigation__header-list di f2 green-800 quarto js-mobile-nav-header" data-header="about">About</li>/
@@ -35,7 +37,7 @@
       <h2 class="quarto fw4 green-800"></h2>
       <ul class="mobile-navigation__list">
         <li class="mobile-navigation__list-item js-mobile-list-item" data-header="about">
-          <a class="mobile-navigation__header ringside fw2 green-800" href="#about">About</a>
+          <a class="mobile-navigation__header ringside fw2 green-800" href="about">About</a>
           <ul class="navigation-list navigation-list__subnav">
             <li class="subnav-list-item mb3"><a href="#our-approach" class="mobile-navigation__link js-mobile-subnav-link ringside fw6 green-800">Our approach</a></li>
             <li class="subnav-list-item mb3"><a href="#our-company" class="mobile-navigation__link js-mobile-subnav-link ringside fw6 green-800">Our company</a></li>
@@ -43,10 +45,10 @@
           </ul>
         </li>
         <li class="mobile-navigation__list-item js-mobile-list-item" data-header="articles">
-          <a class="mobile-navigation__header ringside fw2 green-800" href="#articles">Articles</a>
+          <a class="mobile-navigation__header ringside fw2 green-800" href="../post/">Articles</a>
           <ul class="navigation-list navigation-list__subnav">
             {{ range where .Site.RegularPages "Type" "post" }}
-            <li class="subnav-list-item mb3"><a href="#{{ .Params.id }}" class="mobile-navigation__link ringside fw6 green-800 js-mobile-subnav-link">{{ .Title }}</a></li>
+            <li class="subnav-list-item mb3"><a href="../{{ .Params.id }}" class="mobile-navigation__link ringside fw6 green-800 js-mobile-subnav-link">{{ .Title }}</a></li>
             {{ end }}
           </ul>
         </li>

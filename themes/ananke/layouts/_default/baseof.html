@@ -45,7 +45,7 @@
 
   <body class="ma0 grey-500 js-body {{ $.Param "body_classes"  | }}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
 
-    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    {{ block "header" . }}{{ partial "site-navigation.html" .}}{{ end }}
     <main class="pb4 ph4" role="main">
       {{ block "main" . }}{{ end }}
     </main>

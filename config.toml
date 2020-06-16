@@ -3,5 +3,49 @@ languageCode = "en-us"
 title = "TigerSoup"
 theme = "ananke"
 publishDir = "docs"
+[menu]
+  [[menu.main]]
+    identifier = "post"
+    name = "Articles"
+    title = "Articles"
+    url = "/post/"
+    weight = -9
+  [[menu.main]]
+    parent = "post"
+    name = "Back to the Future"
+    url = "/post/back-to-the-future"
+    weight = 1
+  [[menu.main]]
+    parent = "post"
+    name = "Second Article"
+    url = "/post/second-article"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    title = "About"
+    url = "/about"
+    weight = -10
+  [[menu.main]]
+    parent = "about"
+    name = "An approach"
+    url = "/about/#our-approach"
+    weight = 1
+  [[menu.main]]
+    parent = "about"
+    name = "Our company"
+    url = "/about/#our-company"
+    weight = 2
+  [[menu.main]]
+    parent = "about"
+    name = "Fable"
+    url = "/about/#our-story"
+    weight = 3
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    title = "Contact"
+    url = "/contact"
+    weight = -8
 [params]
     custom_js = ["/js/main.js"]

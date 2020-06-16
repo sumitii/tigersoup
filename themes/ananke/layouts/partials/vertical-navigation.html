@@ -1,23 +1,30 @@
+<!-- sidebar start -->
 <div class="side-nav js-nav-links-wrapper ringside w-30">
   <ul class="navigation-list">
-    <li>
-      <a href="#about" class="side-nav__link--main js-nav-link">About</a>
-      <ul class="navigation-list navigation-list__subnav">
-        <li class="navigation-list__subnav-list-item ringside"><a href="#our-approach" class="side-nav__link js-subnav-link">Our approach</a></li>
-        <li class="navigation-list__subnav-list-item ringside"><a href="#our-company" class="side-nav__link js-subnav-link">Our company</a></li>
-        <li class="navigation-list__subnav-list-item ringside"><a href="#our-story" class="side-nav__link js-subnav-link">Our story</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#articles" class="side-nav__link--main js-nav-link">Articles</a>
-      <ul class="navigation-list navigation-list__subnav">
-        {{ range where .Site.RegularPages "Type" "post" }}
-        <li class="navigation-list__subnav-list-item ringside"><a href="#{{ .Params.id }}" class="side-nav__link js-subnav-link">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-    </li>
-    <li>
-      <a href="#contact" class="side-nav__link--main js-nav-link">Contact</a>
-    </li>
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+              <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                  <a class="side-nav__link--main " href="{{ .URL }}">
+                      {{ .Pre }}
+                      <span class="">{{ .Name }}</span>
+                  </a>
+              </li>
+              <ul class="navigation-list navigation-list__subnav">
+                  {{ range .Children }}
+                      <li class="navigation-list__subnav-list-item ringside {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                          <a class="side-nav__link" href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                  {{ end }}
+              </ul>
+          {{ else }}
+              <li>
+                  <a href="{{ .URL }}" class="side-nav__link--main">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
   </ul>
 </div>

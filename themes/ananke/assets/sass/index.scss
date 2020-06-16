@@ -30,7 +30,6 @@ body {
 
   &__image-wrapper {
     margin-top: 22px;
-    width: 100vw;
   }
 
   @media screen and (min-width: 768px) {
@@ -138,8 +137,10 @@ MODIFYING CLASSES
   transition: transform .25s linear;
 }
 
-.our-approach::first-letter {
-  @include first-letter;
+.our-approach {
+  &:first-letter {
+    @include first-letter;
+  }
 }
 
 .glide {

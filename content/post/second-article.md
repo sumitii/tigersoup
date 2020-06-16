@@ -1,13 +1,14 @@
 ---
-title: "Back to the Future"
+title: "Second Article"
 description: "Work and all things life in a post COVID world"
-featured_image: "images/article_header_image.png"
-author_avatar: "images/avatar.png"
-date: 2020-05-06T11:35:58+05:30
+featured_image: "../../images/article_header_image.png"
+author_avatar: "../../images/avatar.png"
+date: 2020-05-10T11:35:58+05:30
 draft: false
 author: "Bill Fritsch"
 type: "post"
-id: "back-to-the-future"
+layout: "summary"
+id: "second-article"
 ---
 
 With the corona virus business shutdown, the world as we knew it is forever changed. It will be many years before we fully recover from the mess that is only now beginning to show itself. With shrunken markets in our future and fierce pressure for growth, companies will have to grab share from their competitors to meet their goals. Per Forrester Research this is not what today’s digital design industry is offering major brands. 
