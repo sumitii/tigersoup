@@ -77,6 +77,7 @@ class Main {
   init() {
     document.addEventListener('DOMContentLoaded', () => {
       new Glide('.glide', {
+        animationDuration: 0,
         autoplay: 2000,
         type: 'carousel',
       }).mount();
