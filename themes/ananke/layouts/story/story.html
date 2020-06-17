@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="flex justify-between">
+  {{ partial "vertical-navigation.html" . }}
+  <div id="our-story" class="section-wrapper mt4">
+    {{ with .Site.GetPage "story" }}
+      {{ partial "our-story" . }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

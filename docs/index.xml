@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>An approach</title>
+      <title>About</title>
       <link>http://sumitii.github.io/tigersoup/about/</link>
       <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
       
@@ -68,12 +68,31 @@
     </item>
     
     <item>
-      <title>Our resources:</title>
+      <title>New Challenges</title>
+      <link>http://sumitii.github.io/tigersoup/challenges/</link>
+      <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
+      
+      <guid>http://sumitii.github.io/tigersoup/challenges/</guid>
+      <description>Overcapacity + Compressed Demand   Growth will require keeping your own customers while stealing those from competitors. Requirements: Renewed focus on keeping every single customer; improving customer experiences; getting more strategic and competitive marketing campaigns; improve customer service.
+ Counteracting competitive aggression   Expect leading competitors to upgrade their advertising campaigns in all media. Requirements: Build stronger intelligence on competitors; improve speed to market; talk to your own customers and invest in differentiating your brand.</description>
+    </item>
+    
+    <item>
+      <title>Our approach</title>
       <link>http://sumitii.github.io/tigersoup/resources/</link>
       <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
       
       <guid>http://sumitii.github.io/tigersoup/resources/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Our story</title>
+      <link>http://sumitii.github.io/tigersoup/story/</link>
+      <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
+      
+      <guid>http://sumitii.github.io/tigersoup/story/</guid>
+      <description>Long ago, there was a King and his favorite chef. The king’s favorite chef had a knack for making tasty soups. Much of his success lay with the gathering of unique local vegetables and spices and roasting these into a savory base. Into this carefully produced stock he added a variety of meats like fish, chicken and whatever else he could catch. The soup was so tasty that it didn’t matter much what meat was added.</description>
     </item>
     
     <item>
@@ -86,12 +105,23 @@
     </item>
     
     <item>
-      <title>Our story</title>
-      <link>http://sumitii.github.io/tigersoup/story/</link>
+      <title>Thought Starter 01</title>
+      <link>http://sumitii.github.io/tigersoup/thoughts/first/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sumitii.github.io/tigersoup/story/</guid>
-      <description>Long ago, there was a King and his favorite chef. The king’s favorite chef had a knack for making tasty soups. Much of his success lay with the gathering of unique local vegetables and spices and roasting these into a savory base. Into this carefully produced stock he added a variety of meats like fish, chicken and whatever else he could catch. The soup was so tasty that it didn’t matter much what meat was added.</description>
+      <guid>http://sumitii.github.io/tigersoup/thoughts/first/</guid>
+      <description>Ambitioni dedisse scripsisse iudicaretur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Integer legentibus erat a ante historiarum dapibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Fabio vel iudice vincam, sunt in culpa qui officia. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Contra legem facit qui id facit quod lex prohibet.
+Quis aute iure reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</description>
+    </item>
+    
+    <item>
+      <title>Thought Starter 02</title>
+      <link>http://sumitii.github.io/tigersoup/thoughts/second/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sumitii.github.io/tigersoup/thoughts/second/</guid>
+      <description>Ambitioni dedisse scripsisse iudicaretur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Integer legentibus erat a ante historiarum dapibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Fabio vel iudice vincam, sunt in culpa qui officia. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Contra legem facit qui id facit quod lex prohibet.
+Quis aute iure reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</description>
     </item>
     
   </channel>

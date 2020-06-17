@@ -38,7 +38,17 @@
   </url>
   
   <url>
+    <loc>http://sumitii.github.io/tigersoup/challenges/</loc>
+    <lastmod>2020-05-06T11:35:58+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://sumitii.github.io/tigersoup/resources/</loc>
+    <lastmod>2020-05-06T11:35:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://sumitii.github.io/tigersoup/story/</loc>
     <lastmod>2020-05-06T11:35:58+05:30</lastmod>
   </url>
   
@@ -57,11 +67,19 @@
   </url>
   
   <url>
-    <loc>http://sumitii.github.io/tigersoup/story/</loc>
+    <loc>http://sumitii.github.io/tigersoup/tags/</loc>
   </url>
   
   <url>
-    <loc>http://sumitii.github.io/tigersoup/tags/</loc>
+    <loc>http://sumitii.github.io/tigersoup/thoughts/first/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sumitii.github.io/tigersoup/thoughts/second/</loc>
+  </url>
+  
+  <url>
+    <loc>http://sumitii.github.io/tigersoup/thoughts/</loc>
   </url>
   
 </urlset>

@@ -7,10 +7,6 @@
 @import 'glide.core';
 @import 'glide.theme';
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Quarto';
 }
@@ -138,8 +134,12 @@ MODIFYING CLASSES
 }
 
 .our-approach {
-  &:first-letter {
-    @include first-letter;
+  p {
+    &:first-of-type {
+      &:first-letter {
+        @include first-letter;
+      }
+    }
   }
 }
 

@@ -1,5 +1,46 @@
 {{ define "main" }}
-  {{ with .Site.GetPage "carousel" }}
+  <!-- {{ with .Site.GetPage "carousel" }}
     {{ partial "carousel" . }}
-  {{ end }}
+  {{ end }} -->
+  <div class="flex justify-between">
+    {{ partial "vertical-navigation.html" . }}
+    <div class="w-70-ns w-100-m w-100 mt2">
+      <section id="about" class="section-main js-section">
+        {{ with .Site.GetPage "about" }}
+          <div id="our-approach" class="mt4">
+            <div class="our-approach__image-wrapper w-100 w-75-ns pa2">
+              <img src="{{ .Params.featured_image }}" />
+            </div>
+            <div class="our-approach measure-wide f4 lh-copy">
+              <h2 class="lh-title f2 green-800">{{ .Params.intro_text }}</h2>
+              <div class="chronicle">
+                {{ .Content }}
+              </div>
+            </div>
+        </div>
+        {{ end }}
+        <div id="our-company" class="section-wrapper mt6">
+          {{ with .Site.GetPage "wwd" }}
+            {{ partial "what-we-do" . }}
+          {{ end }}
+          {{ with .Site.GetPage "resources" }}
+            {{ partial "resources" . }}
+          {{ end }}
+          {{ with .Site.GetPage "leadership" }}
+            {{ partial "leadership" . }}
+          {{ end }}
+        </div>
+        <div id="new-challenges" class="section-wrapper mt6">
+          {{ with .Site.GetPage "challenges" }}
+            {{ partial "new-challenges" . }}
+          {{ end }}
+        </div>
+        <!-- <div id="our-story" class="section-wrapper mt6">
+          {{ with .Site.GetPage "story" }}
+            {{ partial "our-story" . }}
+          {{ end }}
+        </div> -->
+      </section>
+    </div>
+  </div>
 {{ end }} 

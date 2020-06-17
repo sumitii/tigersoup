@@ -1,15 +1,16 @@
 {{ define "main" }}
-  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-      {{- .Content -}}
-    </section>
-    <section class="flex-ns flex-wrap justify-around mt5">
+<div class="flex justify-between">
+  {{ partial "vertical-navigation.html" . }}
+  <div class="">
+    <div class="flex-ns flex-wrap justify-around mt5">
       {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          {{- partial "summary.html" . -}}
+        <div id="{{ .Params.id }}" class="relative w-100 mb6 bg-white">
+          <h1 class="f2 green-800">{{ .Params.title }}</h1>
+          <h2 class="f3 grey-900">{{ .Params.description }}</h2>
+          {{ .Content }}
         </div>
       {{ end }}
-    </section>
-    {{- template "_internal/pagination.html" . -}}
-  </article>
+    </div>
+  </div>
+</div>
 {{ end }}

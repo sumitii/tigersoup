@@ -1,14 +1,9 @@
 ---
-title: "Leadership"
+title: "New Challenges"
 date: 2020-05-06T11:35:58+05:30
 draft: false
-leadership_intro: "Tiger Soup custom assembles remote teams of creative leaders around the world to swiftly solve unique marketing challenges that current resources cannot solve either through lack of available time or lack of experience."
-email_icon: "images/email-icon.svg"
-leadership_image: "images/bill_fristch.png"
-email_address: billfritsch@tigersoup.net
-thought_starter_button: "Thought starters"
-leadership_quote: "I always encourage people to freely talk about challenges. It never hurts to get another point-of-view. There is absolutely no obligation by contacting us."
-leadership_main_copy: "His credentials include CEO of Digital Kitchen (Multiple Emmy Award winning creator of work recognized by people around the world); CEO of Cf2GS(one of the leading direct marketing agency brands in the US) and Director of Creative Services at Walt Disney (where his team helped to launch The Disney Channel and Disney Home Video."
+header_text: "New Challenges"
+intro_text: "Ut enim ad minim veniam, quis nostrud exercitation. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Here are three challenges that may require some Tiger Soup:"
 caret: "images/caret.svg"
 ---
 
@@ -20,3 +15,7 @@ Expect leading competitors to upgrade their advertising campaigns in all media. 
 
 3. ### Commodity Perception
 The less differentiated your company is, the stronger the need will be to reduce prices to get business. Certain industries (like banking) have brand differentiation with almost no meaning to customers. Digital interfaces between competitors offer almost the same experiences. Requirements: Investigation among your most important customer groups about their experience with your brand, revamping websites, apps, and other consumer interfaces to add personality, energy and enthusiasm to their experiences.
+
+
+
+

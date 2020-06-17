@@ -5,47 +5,53 @@ theme = "ananke"
 publishDir = "docs"
 [menu]
   [[menu.main]]
-    identifier = "post"
-    name = "Articles"
-    title = "Articles"
-    url = "/post/"
-    weight = -9
-  [[menu.main]]
-    parent = "post"
-    name = "Back to the Future"
-    url = "/post/back-to-the-future"
-    weight = 1
-  [[menu.main]]
-    parent = "post"
-    name = "Second Article"
-    url = "/post/second-article"
-    weight = 2
-  [[menu.main]]
     identifier = "about"
     name = "About"
     title = "About"
-    url = "/about"
+    url = "/"
     weight = -10
   [[menu.main]]
     parent = "about"
-    name = "An approach"
-    url = "/about/#our-approach"
+    name = "Tiger Soup"
+    url = "/#our-approach"
     weight = 1
   [[menu.main]]
     parent = "about"
-    name = "Our company"
-    url = "/about/#our-company"
+    name = "What we do"
+    url = "/#our-company"
     weight = 2
   [[menu.main]]
     parent = "about"
-    name = "Fable"
-    url = "/about/#our-story"
+    name = "New challenges"
+    url = "/#new-challenges"
     weight = 3
+  [[menu.main]]
+    identifier = "thoughts"
+    name = "Thought starters"
+    title = "Thought starters"
+    url = "/thoughts/first"
+    weight = -9
+  [[menu.main]]
+    parent = "thoughts"
+    name = "Thought starters 01"
+    url = "/thoughts/first"
+    weight = 1
+  [[menu.main]]
+    parent = "thoughts"
+    name = "Thought starters 02"
+    url = "/thoughts/second"
+    weight = 2
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     title = "Contact"
     url = "/contact"
     weight = -8
+  [[menu.main]]
+    identifier = "fable"
+    name = "a Fable"
+    title = "Fable"
+    url = "/story"
+    weight = -7
 [params]
     custom_js = ["/js/main.js"]

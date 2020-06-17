@@ -20,6 +20,7 @@
 
   &__thought-starter-wrapper {
     ol {
+      color: $orange-500;
       padding-left: 32px; 
     }
 
@@ -29,6 +30,8 @@
 
     p {
       font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 36px;
     }
   }
 
@@ -68,5 +71,11 @@
     left: 28%;
     padding-left: 48%;
     padding-right: 7rem;
+  }
+}
+
+.our-approach {
+  &__image-wrapper {
+    margin: 0 auto;
   }
 }

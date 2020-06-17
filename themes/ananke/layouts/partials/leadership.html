@@ -11,17 +11,5 @@
       <a class="ringside orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a>
     </div>
     <p class="leadership__copy ringside-light mt5 f4 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
-    <div class="link-wrapper">
-      <a class="ringside orange-500 no-underline f5 js-thought-starter-link" href="javascript:void(0)">
-        {{ .Params.thought_starter_button }}
-        <object class="caret sm-icon mr1 js-caret" data="{{ .Params.caret }}" type="image/svg+xml"><img src="{{ .Params.caret }}" /></object>
-      </a>
-    </div>
-    <div class="leadership__thought-starter-wrapper read-more__text-wrapper js-thought-starters">
-      <h2 class="f3 grey-900 b ringside">Three challenges that may require some Tiger Soup:</h2>
-      <div class="f3 fw4 chronicle grey-900">
-        {{ .Content }}
-      </div>
-    </div>
   </div>
 </div>
