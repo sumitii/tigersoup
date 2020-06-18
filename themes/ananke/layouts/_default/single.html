@@ -1,13 +1,13 @@
 {{ define "main" }}
   {{ $section := .Site.GetPage "section" .Section }}
-  <div class="flex justify-between mw8 center pv6 ph3">
+  <div class="flex justify-between center pv4">
     {{ partial "vertical-navigation.html" . }}
-    <div class="flex-row">
-      <header class="mt4 w-100">
+    <div class="mh0 mh6-ns mh0-m">
+      <header class="mt4">
         <h1 class="f2 green-800 mt3 mb1">{{- .Title -}}</h1>
         <h3 class="f3 fw2 chronicle grey-900">{{ .Params.description }}</h3>
       </header>
-        <div class="relative w-100 chronicle">
+        <div class="chronicle">
           {{- .Content -}}
         </div>
     </div>

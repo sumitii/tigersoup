@@ -3,8 +3,11 @@ title: "What we do"
 date: 2020-05-06T11:35:58+05:30
 draft: false
 more_button: "More"
-caret: "images/caret.svg"
+caret: "../../images/caret.svg"
+image: "../../images/compass.png"
 what_we_do_intro: "Tiger Soup custom assembles remote teams of creative leaders around the world to swiftly solve unique marketing challenges that current resources cannot solve either through lack of available time or lack of experience."
+type: about
+layout: wwd
 ---
 
 The new reality facing companies is that markets have shrunk and winning now requires taking a new kind of fight to the marketplace. Like catching  a tiger, this can be a tough undertaking. One that takes special skills and deep understanding of  the dynamics of industry segments. Stealing customers from competitors as they grow ever-more aggressive in attempting to do the same thing to you will be the name of the game.

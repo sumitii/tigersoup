@@ -1,0 +1,19 @@
+
+{{ define "main" }}
+<div class="flex justify-between">
+  {{ partial "vertical-navigation.html" . }}
+  <div class="new-challenges measure-wide f4 lh-copy ml0">
+    <div class="sm-image-wrapper">
+      <img src="{{ .Params.image }}" />
+    </div>
+    <div class="mt6">
+      <h2 class="f2 b green-800">{{ .Params.header_text }} </h2>
+      <h4 class="f3 fw2 mb5 chronicle">{{ .Params.intro_text }}</h4>
+      <div class="f3 fw4 chronicle grey-900">
+          {{ .Content }}
+      </div>
+    </div>
+
+  </div>
+</div>
+{{ end }}

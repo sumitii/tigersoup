@@ -13,17 +13,17 @@ publishDir = "docs"
   [[menu.main]]
     parent = "about"
     name = "Tiger Soup"
-    url = "/#our-approach"
+    url = "/"
     weight = 1
   [[menu.main]]
     parent = "about"
     name = "What we do"
-    url = "/#our-company"
+    url = "/about/wwd"
     weight = 2
   [[menu.main]]
     parent = "about"
     name = "New challenges"
-    url = "/#new-challenges"
+    url = "/about/challenges"
     weight = 3
   [[menu.main]]
     identifier = "thoughts"

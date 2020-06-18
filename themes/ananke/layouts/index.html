@@ -4,34 +4,18 @@
   <div class="w-70-ns w-100-m w-100">
     <section id="about" class="section-main js-section">
       {{ with .Site.GetPage "about" }}
-        <div id="our-approach">
-          <div class="our-approach__image-wrapper w-100 w-80-ns">
+        <div id="introduction">
+          <div class="introduction__image-wrapper w-100 w-80-ns">
             <img src="{{ .Params.featured_image }}" />
           </div>
-          <div class="our-approach measure-wide f4 lh-copy">
+          <div class="introduction measure-wide f4 lh-copy">
             <h2 class="lh-title f2 green-800">{{ .Params.intro_text }}</h2>
             <div class="chronicle">
               {{ .Content }}
             </div>
           </div>
-      </div>
+        </div>
       {{ end }}
-      <div id="our-company" class="section-wrapper mt6">
-        {{ with .Site.GetPage "wwd" }}
-          {{ partial "what-we-do" . }}
-        {{ end }}
-        {{ with .Site.GetPage "resources" }}
-          {{ partial "resources" . }}
-        {{ end }}
-        {{ with .Site.GetPage "leadership" }}
-          {{ partial "leadership" . }}
-        {{ end }}
-      </div>
-      <div id="new-challenges" class="section-wrapper mt6">
-        {{ with .Site.GetPage "challenges" }}
-          {{ partial "new-challenges" . }}
-        {{ end }}
-      </div>
     </section>
   </div>
 </div>

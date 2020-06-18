@@ -7,6 +7,10 @@
 @import 'glide.core';
 @import 'glide.theme';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Quarto';
 }
@@ -45,6 +49,10 @@ body {
   &--challenges {
     margin: 0 auto;
   }
+}
+
+.sm-image-wrapper {
+  @include sm-image;
 }
 
 .content-wrapper {
@@ -133,7 +141,7 @@ MODIFYING CLASSES
   transition: transform .25s linear;
 }
 
-.our-approach {
+.introduction {
   p {
     &:first-of-type {
       &:first-letter {

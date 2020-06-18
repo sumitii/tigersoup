@@ -5,6 +5,9 @@ draft: false
 header_text: "New Challenges"
 intro_text: "Ut enim ad minim veniam, quis nostrud exercitation. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Here are three challenges that may require some Tiger Soup:"
 caret: "images/caret.svg"
+image: "../../images/net.png"
+type: about
+layout: challenges
 ---
 
 1. ### Overcapacity + Compressed Demand

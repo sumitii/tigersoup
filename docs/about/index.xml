@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on TigerSoup</title>
+    <link>http://sumitii.github.io/tigersoup/about/</link>
+    <description>Recent content in Abouts on TigerSoup</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 May 2020 11:35:58 +0530</lastBuildDate>
+    
+	<atom:link href="http://sumitii.github.io/tigersoup/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Challenges</title>
+      <link>http://sumitii.github.io/tigersoup/about/challenges/</link>
+      <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
+      
+      <guid>http://sumitii.github.io/tigersoup/about/challenges/</guid>
+      <description>Overcapacity + Compressed Demand   Growth will require keeping your own customers while stealing those from competitors. Requirements: Renewed focus on keeping every single customer; improving customer experiences; getting more strategic and competitive marketing campaigns; improve customer service.
+ Counteracting competitive aggression   Expect leading competitors to upgrade their advertising campaigns in all media. Requirements: Build stronger intelligence on competitors; improve speed to market; talk to your own customers and invest in differentiating your brand.</description>
+    </item>
+    
+    <item>
+      <title>What we do</title>
+      <link>http://sumitii.github.io/tigersoup/about/wwd/</link>
+      <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
+      
+      <guid>http://sumitii.github.io/tigersoup/about/wwd/</guid>
+      <description>The new reality facing companies is that markets have shrunk and winning now requires taking a new kind of fight to the marketplace. Like catching a tiger, this can be a tough undertaking. One that takes special skills and deep understanding of the dynamics of industry segments. Stealing customers from competitors as they grow ever-more aggressive in attempting to do the same thing to you will be the name of the game.</description>
+    </item>
+    
+  </channel>
+</rss>
