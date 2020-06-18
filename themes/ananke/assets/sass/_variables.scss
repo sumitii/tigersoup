@@ -3,6 +3,7 @@ $transition-standard: .75s;
 $beige-100: #f7f7f7;
 $grey-500: #707070;
 $grey-900: #434242;
+$grey-950: #322f2f;
 $green-800: #245f64;
 $orange-500: #ce5833;
 
@@ -46,9 +47,9 @@ $orange-500: #ce5833;
 }
 
 @mixin first-letter {
-  color: $green-800;
-  font-size: 48px;
-  line-height: 44px;
+  color: $orange-500;
+  font-size: 52px;
+  line-height: 62px;
 }
 
 $glide-class: 'glide' !default;

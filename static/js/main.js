@@ -62,12 +62,9 @@ class Main {
     this.wwdContent = document.querySelector(SELECTORS.WHAT_WE_DO_CONTENT);
     this.caret = [...document.querySelectorAll(SELECTORS.CARET)];
 
-    this.handleScrollDown = this.handleScrollDown.bind(this);
-    this.handleSubnavigationHighlight = this.handleSubnavigationHighlight.bind(this);
     this.setActiveNavigation = this.setActiveNavigation.bind(this);
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
-    this.displayMobileSubnavigation = this.displayMobileSubnavigation.bind(this);
     this.toggleReadMoreSection = this.toggleReadMoreSection.bind(this);
     this.toggleCaret = this.toggleCaret.bind(this);
 
@@ -85,19 +82,11 @@ class Main {
       }
       this.mobileNavigationLink.addEventListener("click", this.openNavigation);
       this.closeButton.addEventListener("click", this.closeNavigation);
-      window.addEventListener("scroll", _.throttle(this.handleScrollDown, 100));
-      window.addEventListener("scroll", _.throttle(this.handleSubnavigationHighlight, 100));
       if (this.readMoreLink) {
         this.readMoreLink.addEventListener("click", () => {
           this.toggleReadMoreSection(this.wwdContent);
           this.toggleCaret(this.readMoreLink);
         })
-      }
-      if (this.thoughtStarterLink) {
-        this.thoughtStarterLink.addEventListener("click", () => {
-          this.toggleReadMoreSection(this.thoughtStarters);
-          this.toggleCaret(this.thoughtStarterLink);
-        });
       }
 
       this.mobileNavigationListItems.forEach((item) => {
@@ -133,16 +122,6 @@ class Main {
       node.classList.remove(CLASSES.ACTIVE_NAVIGATION);
     });
     e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
-    this.displayMobileSubnavigation(e.target);
-  }
-
-  displayMobileSubnavigation(e) {
-    this.mobileNavigationListItems.forEach(item => {
-      item.classList.remove(CLASSES.DISPLAY);
-      if (e.dataset.header === item.dataset.header) {
-        this.toggleReadMoreSection(item);
-      }
-    })
   }
 
   /**
@@ -195,49 +174,7 @@ class Main {
   hideNavigation() {
     this.navigation.classList.remove(CLASSES.SHOW);
   }
-  
-  /**
-   * Handle active scrolling and displaying navigation
-   */
-  handleScrollDown() {
-    // let shouldHide = true;
-    // let fromTop = window.scrollY;
 
-    // this.navigationLinks.forEach(link => {
-    //   let section = document.querySelector(link.hash);
-    //   if (
-    //     section.getBoundingClientRect().y <= fromTop &&
-    //     section.offsetTop + section.getBoundingClientRect().height > fromTop
-    //   ) {
-    //     shouldHide = false;
-    //     link.classList.add(CLASSES.ACTIVE);
-    //     this.displayNavigation();
-    //   } else {
-    //     link.classList.remove(CLASSES.ACTIVE);
-    //   }
-    // });
-    // if (shouldHide) {
-    //   this.hideNavigation();
-    // }
-  }
-
-  /**
-   * Handle subnavigation highlighting
-   */
-
-   handleSubnavigationHighlight() {
-     let fromTop = window.scrollY;
-     this.subnavigationLinks.forEach(link => {
-       let sectionHash = document.querySelector(link.hash);
-       if (sectionHash != null) {
-         if (sectionHash.offsetTop <= fromTop && sectionHash.offsetTop + sectionHash.offsetHeight > fromTop) {
-           link.classList.add(CLASSES.ACTIVE);
-         } else {
-           link.classList.remove(CLASSES.ACTIVE);
-         }
-       }
-     })
-}
 }
 
 new Main();
