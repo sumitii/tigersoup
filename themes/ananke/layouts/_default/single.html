@@ -2,7 +2,7 @@
   {{ $section := .Site.GetPage "section" .Section }}
   <div class="flex justify-between center pv4">
     {{ partial "vertical-navigation.html" . }}
-    <div class="mh0 mh6-ns mh0-m">
+    <div class="section-wrapper mh0 mh6-ns mh0-m js-section">
       <header class="mt4">
         <h1 class="f2 green-800 mt3 mb1">{{- .Title -}}</h1>
         <h3 class="f3 fw2 chronicle grey-900">{{ .Params.description }}</h3>
@@ -11,7 +11,5 @@
           {{- .Content -}}
         </div>
     </div>
-
-
   </div>
 {{ end }}

@@ -1,4 +1,4 @@
-<div class="navigation pv4 ph5 bg-white" role="navigation">
+<div class="navigation pv4 ph4 ph5-ns bg-white" role="navigation">
   <div class="mw9 center">
     <div class="flex flex-row justify-between">
       <div class="w-50 w-20-ns w-30-m">
@@ -27,6 +27,10 @@
     <a href="javascript:void(0)" class="close-btn flex flex-row-reverse pt3 pr3 js-close-btn">
       <object class="close-icon mr1" data="{{ .Params.mobile_nav_close }}" type="image/svg+xml"><img src="{{ .Params.mobile_nav_close }}" /></object>
     </a>
+    {{ else }}
+    <a href="javascript:void(0)" class="close-btn flex flex-row-reverse pt3 pr3 js-close-btn">
+      <object class="close-icon mr1" data="../../{{ .Params.mobile_nav_close }}" type="image/svg+xml"><img src="../../{{ .Params.mobile_nav_close }}" /></object>
+    </a>
     {{ end }}
     <div class="overlay-content pt4">
       <ul class="w-75 f2 fw2 quarto green-800">
@@ -39,19 +43,26 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
           {{ if .HasChildren }}
-            <li class="mobile-navigation__list-item js-mobile-list-item {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                <a class="mobile-navigation__header ringside fw2 green-800" href="{{ .URL }}">
+            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                <a class="side-nav__link--main ringside-light" href="{{ .URL }}">
                     {{ .Pre }}
                     <span class="">{{ .Name }}</span>
                 </a>
             </li>
             <ul class="navigation-list navigation-list__subnav">
                 {{ range .Children }}
-                    <li class="subnav-list-item mb3 {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                      <a class="mobile-navigation__link js-mobile-subnav-link ringside fw6 green-800" href="{{ .URL }}">{{ .Name }}</a>
+                    <li class="navigation-list__subnav-list-item ringside {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                        <a class="side-nav__link ringside-light" href="{{ .URL }}">{{ .Name }}</a>
                     </li>
                 {{ end }}
             </ul>
+          {{ else }}
+            <li class="mb3">
+                <a href="{{ .URL }}" class="side-nav__link--main ringside-light">
+                    {{ .Pre }}
+                    <span>{{ .Name }}</span>
+                </a>
+            </li>
           {{ end }}
         {{ end }}
       </ul>

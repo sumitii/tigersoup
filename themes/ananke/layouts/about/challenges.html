@@ -2,11 +2,11 @@
 {{ define "main" }}
 <div class="flex justify-between">
   {{ partial "vertical-navigation.html" . }}
-  <div class="new-challenges measure-wide f4 lh-copy ml0">
-    <div class="sm-image-wrapper">
-      <img src="{{ .Params.image }}" />
-    </div>
-    <div class="mt6">
+  <div class="new-challenges section-wrapper w-100 f4 lh-copy ml0 js-section">
+    <div class="measure-wide mt4 mt6-ns">
+      <div class="sm-image-wrapper">
+        <img src="{{ .Params.image }}" />
+      </div>
       <h2 class="f2 b green-800">{{ .Params.header_text }} </h2>
       <h4 class="f3 fw2 mb5 chronicle">{{ .Params.intro_text }}</h4>
       <div class="f3 fw4 chronicle grey-900">

@@ -7,6 +7,18 @@
 @import 'glide.core';
 @import 'glide.theme';
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -43,6 +55,10 @@ body {
 .header-text {
   font-family: 'Quarto', serif;
   font-weight: 400;
+}
+
+.section-wrapper {
+  opacity: 0;
 }
 
 .image-wrapper {
@@ -114,8 +130,10 @@ MODIFYING CLASSES
 }
 
 .-animateup {
-  opacity: 1;
-  transform: translateZ(0) scale(1);
+  animation: fadeInUp;
+  animation-duration: 0.50s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
 }
 
 .-active {
@@ -139,6 +157,16 @@ MODIFYING CLASSES
 .-rotate {
   transform: rotate(180deg);
   transition: transform .25s linear;
+}
+
+.nav-active {
+  .side-nav {
+    &__link {
+      &--main {
+        font-family: 'Ringside Light';
+      }
+    }
+  }
 }
 
 .introduction {

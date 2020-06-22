@@ -18,40 +18,40 @@ publishDir = "docs"
   [[menu.main]]
     parent = "about"
     name = "What we do"
-    url = "/about/wwd"
+    url = "/about/wwd/"
     weight = 2
   [[menu.main]]
     parent = "about"
     name = "New challenges"
-    url = "/about/challenges"
+    url = "/about/challenges/"
     weight = 3
   [[menu.main]]
     identifier = "thoughts"
     name = "Thought starters"
     title = "Thought starters"
-    url = "/thoughts/first"
+    url = "/thoughts/"
     weight = -9
   [[menu.main]]
     parent = "thoughts"
     name = "Thought starters 01"
-    url = "/thoughts/first"
+    url = "/thoughts/first/"
     weight = 1
   [[menu.main]]
     parent = "thoughts"
     name = "Thought starters 02"
-    url = "/thoughts/second"
+    url = "/thoughts/second/"
     weight = 2
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     title = "Contact"
-    url = "/contact"
+    url = "/contact/"
     weight = -8
   [[menu.main]]
     identifier = "fable"
     name = "a Fable"
     title = "Fable"
-    url = "/story"
+    url = "/story/"
     weight = -7
 [params]
     custom_js = ["/js/main.js"]

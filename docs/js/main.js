@@ -67,12 +67,14 @@ class Main {
     this.closeNavigation = this.closeNavigation.bind(this);
     this.toggleReadMoreSection = this.toggleReadMoreSection.bind(this);
     this.toggleCaret = this.toggleCaret.bind(this);
+    this.fadeInSection = this.fadeInSection.bind(this);
 
     this.init();
   }
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
+      this.fadeInSection();
       if (document.querySelector('.glide')) {
         new Glide('.glide', {
           animationDuration: 0,
@@ -173,6 +175,17 @@ class Main {
 
   hideNavigation() {
     this.navigation.classList.remove(CLASSES.SHOW);
+  }
+
+  /**
+   * fade in content once the page has loaded
+   */
+  fadeInSection() {
+    this.section.forEach((item) => {
+      setTimeout(() => {
+        item.classList.add(CLASSES.ANIMATE_UP);
+      }, 750)
+    });
   }
 
 }
