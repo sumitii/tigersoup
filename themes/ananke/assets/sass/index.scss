@@ -150,6 +150,11 @@ MODIFYING CLASSES
   visibility: visible;
 }
 
+.-show-nav {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
 .-hide {
   display: none;
 }
@@ -176,6 +181,10 @@ MODIFYING CLASSES
         @include first-letter;
       }
     }
+  }
+
+  &__image-wrapper {
+    margin: 0 auto;
   }
 }
 
@@ -225,5 +234,9 @@ MODIFYING CLASSES
     &::first-letter {
       @include first-letter;
     }
+  }
+
+  &__image-wrapper {
+    margin: 0 auto;
   }
 }

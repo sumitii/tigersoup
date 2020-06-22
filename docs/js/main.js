@@ -34,6 +34,7 @@ const CLASSES = {
   ACTIVE: "-active",
   ACTIVE_NAVIGATION: "-active-nav",
   SHOW: '-show',
+  SHOW_NAV: '-show-nav',
   DISPLAY: '-display',
   DISPLAY_MOBILE_NAV: '-display-sm',
   HIDE: '-hide',
@@ -124,10 +125,18 @@ class Main {
       node.classList.remove(CLASSES.ACTIVE_NAVIGATION);
     });
     e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
+    this.mobileNavigationListItems.forEach(item => {
+      if (e.target.dataset.header === item.dataset.listHeader) {
+        item.classList.add(CLASSES.SHOW_NAV);
+      } else {
+        item.classList.remove(CLASSES.SHOW_NAV);
+      }
+    });
+
   }
 
   /**
-   * Toggle caret 
+  * Toggle caret 
   */
  toggleCaret(linkEl) {
   this.caret.forEach((item) => {
@@ -140,7 +149,7 @@ class Main {
  }
 
   /**
-   * Display a given section (pass in the element).
+   * Toggle a section visibility.
    */
   toggleReadMoreSection(el) {
     if (!el.classList.contains(CLASSES.DISPLAY)) {
@@ -184,7 +193,7 @@ class Main {
     this.section.forEach((item) => {
       setTimeout(() => {
         item.classList.add(CLASSES.ANIMATE_UP);
-      }, 750)
+      }, 500)
     });
   }
 
