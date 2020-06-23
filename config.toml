@@ -1,6 +1,6 @@
 baseURL = "http://sumitii.github.io/tigersoup/"
 languageCode = "en-us"
-title = "TigerSoup"
+title = "Tiger Soup"
 theme = "ananke"
 publishDir = "docs"
 [menu]
