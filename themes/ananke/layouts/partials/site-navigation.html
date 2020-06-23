@@ -3,7 +3,7 @@
     <div class="flex flex-row justify-between">
       <div class="navigation__intro-wrapper">
         <a href="{{ .Site.BaseURL }}" class="navigation__text fw2 no-underline">
-          <span class="f6 lh-title b lh-title">
+          <span class="f6 lh-title lh-title">
             {{ .Site.Title }}
           </span>
           {{ with .Site.GetPage "_index.md" }}
@@ -16,7 +16,7 @@
       <div class="mobile-navigation__wrapper">
         <a href="javascript:void(0)" class="orange-500 ringside no-underline js-mobile-nav-link">Menu</a>
       </div>
-      <span class="navigation__header dn f6 lh-title">Enjoy your<br/><span class="orange-500 f6 lh-title">{{ now.Format "Monday" }}</span></span>
+      <span class="navigation__header dn tr f6 lh-title">Enjoy your<br/><span class="orange-500 f6 lh-title">{{ now.Format "Monday" }}</span></span>
     </div>
   </div>
 </div>

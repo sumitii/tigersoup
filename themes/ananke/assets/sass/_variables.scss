@@ -7,10 +7,20 @@ $grey-950: #322f2f;
 $green-800: #245f64;
 $orange-500: #ce5833;
 
+$glide-class: 'glide' !default;
+$glide-element-separator: '__' !default;
+$glide-modifier-separator: '--' !default;
+
 @font-face {
   font-family: 'Quarto';
   font-style: normal;
   src: url('../fonts/Quarto/Quarto-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Quarto Semibold';
+  font-style: normal;
+  src: url('../fonts/Quarto/Quarto-Semibold.otf') format('opentype');
 }
 
 @font-face {
@@ -48,21 +58,15 @@ $orange-500: #ce5833;
 
 @mixin first-letter {
   color: $orange-500;
-  font-size: 52px;
-  line-height: 62px;
+  float: left;
+  font-family: 'Quarto Semibold';
+  font-size: 4.5em;
 }
 
 @mixin sm-image {
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   width: 250px;
 
   @media screen and (min-width: 768px) {
-    position: absolute;
-    right: 0;
-    top: 120px;
   }
 }
-
-$glide-class: 'glide' !default;
-$glide-element-separator: '__' !default;
-$glide-modifier-separator: '--' !default;

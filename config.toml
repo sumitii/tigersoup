@@ -49,7 +49,7 @@ publishDir = "docs"
     weight = -8
   [[menu.main]]
     identifier = "fable"
-    name = "a Fable"
+    name = "A Fable"
     title = "Fable"
     url = "/story/"
     weight = -7

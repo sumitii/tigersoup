@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TigerSoup</title>
+    <title>Tiger Soup on TigerSoup</title>
     <link>http://sumitii.github.io/tigersoup/</link>
-    <description>Recent content on TigerSoup</description>
+    <description>Recent content in Tiger Soup on TigerSoup</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 May 2020 11:35:58 +0530</lastBuildDate>

@@ -1,6 +1,10 @@
-<div class="our-story__image-wrapper w-100 w-75-ns w-60-m">
-  <img src="{{ .Params.featured_image }}" />
-</div>
-<div class="our-story__copy chronicle f4 measure-wide lh-copy">
-  {{ .Content }}
+<div class="our-story__image-wrapper w-100">
+  <div class="measure-wide">
+    <img src="{{ .Params.featured_image }}" />
+    <h2 class="f2 green-800">{{ .Description }}</h2>
+    <div class="our-story__copy chronicle f4 lh-copy">
+      {{ .Content }}
+    </div>
+  </div>
+  
 </div>

@@ -53,7 +53,7 @@ body {
 }
 
 .header-text {
-  font-family: 'Quarto', serif;
+  font-family: 'Quarto Semibold', serif;
   font-weight: 400;
 }
 
@@ -186,6 +186,10 @@ MODIFYING CLASSES
 
   &__image-wrapper {
     margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
   }
 }
 
@@ -218,18 +222,13 @@ MODIFYING CLASSES
   &__copy {
     h2 {
       color: $green-800;
-      font-family: 'Quarto';
-      font-weight: 600;
+      font-family: 'Quarto Semibold';
     }
 
     h3 {
       color: $grey-900;
       font-family: 'Chronicle Text G4';
       font-weight: 400;
-    }
-
-    .image-wrapper {
-      margin: 0 auto;
     }
 
     &::first-letter {
@@ -239,5 +238,9 @@ MODIFYING CLASSES
 
   &__image-wrapper {
     margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      margin: 0; 
+    }
   }
 }

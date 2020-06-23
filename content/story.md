@@ -1,5 +1,6 @@
 ---
 title: "Our story"
+description: "The Legend of Tiger Soup"
 featured_image: '../images/who-we-are.png'
 date: 2020-05-06T11:35:58+05:30
 draft: false

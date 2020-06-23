@@ -1,5 +1,5 @@
 ---
-title: "TigerSoup"
+title: "Tiger Soup"
 description: "is a marketing communications company"
 contact: Contact
 mobile_nav_close: "images/menu-close-icon.svg"
