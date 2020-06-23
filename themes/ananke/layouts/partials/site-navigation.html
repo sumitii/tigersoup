@@ -1,13 +1,13 @@
-<div class="navigation pv4 ph4 ph5-ns bg-white" role="navigation">
+<div class="navigation pv4 bg-white" role="navigation">
   <div class="mw9 center">
     <div class="flex flex-row justify-between">
-      <div class="w-25 w-20-ns w-30-m">
+      <div class="navigation__intro-wrapper">
         <a href="{{ .Site.BaseURL }}" class="navigation__text fw2 no-underline">
           <span class="f6 lh-title b lh-title">
             {{ .Site.Title }}
           </span>
           {{ with .Site.GetPage "_index.md" }}
-            <span class="f6 lh-title center">
+            <span class="navigation__description f6 lh-title center">
               {{ .Description }}
             </span>
           {{ end }}
