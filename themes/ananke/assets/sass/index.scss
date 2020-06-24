@@ -137,10 +137,6 @@ MODIFYING CLASSES
 }
 
 .-active {
-  font-family: 'Ringside Light';
-}
-
-.-active-nav {
   color: #ce5833;
 }
 
@@ -156,8 +152,8 @@ MODIFYING CLASSES
   z-index: 100;
 }
 
-.-hide {
-  display: none;
+.-display {
+  max-height: 80px;
 }
 
 .-rotate {

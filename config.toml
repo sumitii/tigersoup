@@ -8,12 +8,12 @@ publishDir = "docs"
     identifier = "about"
     name = "About"
     title = "About"
-    url = "/"
+    url = "#"
     weight = -10
   [[menu.main]]
     parent = "about"
     name = "Tiger Soup"
-    url = "/"
+    url = "/about/introduction/"
     weight = 1
   [[menu.main]]
     parent = "about"
@@ -29,7 +29,7 @@ publishDir = "docs"
     identifier = "thoughts"
     name = "Thought starters"
     title = "Thought starters"
-    url = "/thoughts/"
+    url = "#"
     weight = -9
   [[menu.main]]
     parent = "thoughts"

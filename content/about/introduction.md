@@ -2,7 +2,7 @@
 title: "About"
 date: 2020-05-06T11:35:58+05:30
 draft: false
-featured_image: "images/tiger_hunt.png"
+featured_image: "../../images/tiger_hunt.png"
 type: "about"
 layout: "about"
 intro_text: "If you want tiger soup, it is best to first focus on catching the tiger."

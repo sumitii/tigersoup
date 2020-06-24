@@ -5,19 +5,19 @@
     {{ $currentURL := .URL }}
     {{ range .Site.Menus.main }}
       {{ if .HasChildren }}
-        <li>
-          <a class="side-nav__link--main ringside" href="{{ .URL }}">
+        <li class="mv3">
+          <a class="side-nav__link--main ringside js-nav-link" href="{{ .URL }}" data-parent="{{ lower .Identifier }}">
             {{ .Pre }}
             <span class="">{{ .Name }}</span>
           </a>
+          <ul class="navigation-list navigation-list__subnav mt3 js-subnavigation">
+            {{ range .Children }}
+              <li class="navigation-list__subnav-list-item">
+                <a class="side-nav__link {{ if eq $currentURL .URL }}ringside-light {{else}}ringside{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
         </li>
-        <ul class="navigation-list navigation-list__subnav">
-          {{ range .Children }}
-            <li class="navigation-list__subnav-list-item">
-              <a class="side-nav__link {{ if eq $currentURL .URL }}ringside-light {{else}}ringside{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
-            </li>
-          {{ end }}
-        </ul>
       {{ else }}
         <li class="mb3">
           <a href="{{ .URL }}" class="side-nav__link--main {{ if eq $currentURL .URL }}ringside-light{{else}}ringside{{ end }}">

@@ -10,7 +10,7 @@
 const SELECTORS = {
   NAVIGATION: '.js-nav-links-wrapper',
   NAVIGATION_LINKS: '.js-nav-link',
-  SUBNAVIGATION_LINKS: '.js-subnav-link',
+  SUBNAVIGATION_LINKS: '.js-subnavigation',
   PAGE_SECTION: '.js-section',
   MOBILE_NAVIGATION_LINK: '.js-mobile-nav-link',
   MOBILE_NAVIGATION: '.js-mobile-navigation',
@@ -32,14 +32,12 @@ const SELECTORS = {
 const CLASSES = {
   ANIMATE_UP: "-animateup",
   ACTIVE: "-active",
-  ACTIVE_NAVIGATION: "-active-nav",
   SHOW: '-show',
   SHOW_NAV: '-show-nav',
   DISPLAY: '-display',
-  DISPLAY_MOBILE_NAV: '-display-sm',
-  HIDE: '-hide',
   SCROLL_OFF: '-scroll-off',
   ROTATE: '-rotate',
+  OPEN: '-open',
 }
 
 /**
@@ -69,6 +67,7 @@ class Main {
     this.toggleReadMoreSection = this.toggleReadMoreSection.bind(this);
     this.toggleCaret = this.toggleCaret.bind(this);
     this.fadeInSection = this.fadeInSection.bind(this);
+    this.toggleSubnavigation = this.toggleSubnavigation.bind(this);
 
     this.init();
   }
@@ -83,6 +82,18 @@ class Main {
           type: 'carousel',
         }).mount();
       }
+      if (window.location.pathname === '/tigersoup/') {
+        this.subnavigationLinks[0].classList.add(CLASSES.DISPLAY);
+      }
+      this.navigationLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          this.toggleSubnavigation(link);
+        });
+        if (window.location.href.indexOf(link.dataset.parent) > -1) {
+          let subNav = link.nextElementSibling;
+          subNav.classList.add(CLASSES.DISPLAY);
+        }
+      });
       this.mobileNavigationLink.addEventListener("click", this.openNavigation);
       this.closeButton.addEventListener("click", this.closeNavigation);
       if (this.readMoreLink) {
@@ -91,12 +102,11 @@ class Main {
           this.toggleCaret(this.readMoreLink);
         })
       }
-
       this.mobileNavigationListItems.forEach((item) => {
         item.addEventListener("click", this.closeNavigation);
       });
       this.mobileNavigationHeader.forEach(node => {
-        node.addEventListener('click', this.setActiveNavigation);
+        node.addEventListener("click", this.setActiveNavigation);
       });
     });
   }
@@ -122,9 +132,9 @@ class Main {
    */
   setActiveNavigation(e) {
     this.mobileNavigationHeader.forEach(node => {
-      node.classList.remove(CLASSES.ACTIVE_NAVIGATION);
+      node.classList.remove(CLASSES.ACTIVE);
     });
-    e.target.classList.add(CLASSES.ACTIVE_NAVIGATION);
+    e.target.classList.add(CLASSES.ACTIVE);
     this.mobileNavigationListItems.forEach(item => {
       if (e.target.dataset.header === item.dataset.listHeader) {
         item.classList.add(CLASSES.SHOW_NAV);
@@ -132,7 +142,16 @@ class Main {
         item.classList.remove(CLASSES.SHOW_NAV);
       }
     });
+  }
 
+  toggleSubnavigation(e) {
+    this.subnavigationLinks.forEach(subNavEl => {
+      if (subNavEl === e.nextElementSibling && !subNavEl.classList.contains(CLASSES.DISPLAY)) {
+        subNavEl.classList.toggle(CLASSES.DISPLAY);
+      } else {
+        subNavEl.classList.remove(CLASSES.DISPLAY);
+      }
+    });
   }
 
   /**

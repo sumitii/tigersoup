@@ -37,6 +37,7 @@
   &__link {
     color: $grey-950;
     text-decoration: none;
+
     &--main {
       color: $grey-500 !important;
       text-decoration: none;
@@ -56,11 +57,15 @@
 .navigation-list {
   font-size: 14px;
   list-style: none;
+  width: 200px;
 
   &__subnav {
-    margin: 18px 0;
+    // @include slide-down($transition-slow);
+    margin-bottom: -12px;
+    max-height: 0;
+    overflow-y: hidden;
     padding-left: 18px;
-    width: 200px;
+    transition: all .3s cubic-bezier(0, 1, 0.5, 1);
   }
 
   &__subnav-list-item {
