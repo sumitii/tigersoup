@@ -64,6 +64,11 @@ $glide-modifier-separator: '--' !default;
 }
 
 @mixin sm-image {
-  margin: 0 20% 0 auto;
+  margin: 0 0 0 auto;
+  transform: translateY(10%);
   width: 250px;
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(40%);
+  } 
 }
