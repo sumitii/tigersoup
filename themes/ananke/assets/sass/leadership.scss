@@ -54,7 +54,7 @@
 .resources {
   background: $beige-100;
   left: 50%;
-  margin: 12vw 0 12vw -50vw;
+  margin: 12vw 0 12vw -48vw;
   padding-left: 2rem;
   padding-right: 2rem;
   position: relative;
@@ -67,8 +67,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    left: 28%;
-    padding-left: 48%;
+    left: 30%;
+    padding-left: 52%;
     padding-right: 7rem;
   }
 }

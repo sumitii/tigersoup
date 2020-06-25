@@ -27,6 +27,14 @@ body {
   font-family: 'Quarto Semibold';
 }
 
+.site-wrapper {
+  padding: 0 4rem;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 6rem 0 3rem;
+  }
+}
+
 .intro-wrapper {
   flex-direction: column;
 
