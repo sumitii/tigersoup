@@ -51,7 +51,7 @@ $glide-modifier-separator: '--' !default;
   overflow: hidden;
   transition: height $transition-speed ease-in-out;
 
-  &:not(.-display) {
+  &:not(.-open) {
     display: none;
   }
 }

@@ -171,8 +171,8 @@ class Main {
    * Toggle a section visibility.
    */
   toggleReadMoreSection(el) {
-    if (!el.classList.contains(CLASSES.DISPLAY)) {
-      el.classList.toggle(CLASSES.DISPLAY);
+    if (!el.classList.contains(CLASSES.OPEN)) {
+      el.classList.toggle(CLASSES.OPEN);
       el.style.height = 'auto';
 
       let height = el.clientHeight + "px";
@@ -183,7 +183,7 @@ class Main {
     } else {
       el.style.height = '0px';
       el.addEventListener('transitionend', () => {
-        el.classList.remove(CLASSES.DISPLAY);
+        el.classList.remove(CLASSES.OPEN);
       }, {
         once: true
       });
