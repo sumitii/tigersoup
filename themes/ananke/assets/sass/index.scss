@@ -27,7 +27,8 @@ body {
   font-family: 'Quarto Semibold';
 }
 
-.site-wrapper {
+.site-wrapper,
+.footer {
   padding: 0 4rem;
 
   @media screen and (min-width: 768px) {
@@ -236,6 +237,17 @@ MODIFYING CLASSES
       font-family: 'Chronicle Text G4';
       font-weight: 400;
     }
+
+    img {
+      display: block;
+      float: none;
+      margin: 0 auto;
+      width: 300px;
+
+      @media screen and (min-width: 768px) {
+        float: right;
+      }
+    }
   }
 
   &__image-wrapper {
@@ -249,4 +261,19 @@ MODIFYING CLASSES
 
 .footer {
   margin: 0 auto;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+
+  &__blank-space {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
 }

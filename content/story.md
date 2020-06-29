@@ -2,6 +2,7 @@
 title: "Our story"
 description: "The Legend of Tiger Soup"
 featured_image: '../images/who-we-are.jpg'
+secondary_image: '../images/cooking-ts.jpg'
 date: 2020-05-06T11:35:58+05:30
 draft: false
 type: story
@@ -21,7 +22,7 @@ extra money from the king. He then set out to the forest to find the ingredients
 finding the vegetables, peeling onions, combining spices and moderating the heat to 
 build the base for his tiger soup. After all, this had always been his secret of success.
 
-Tigers were known in those days for their intelligence, beauty and cunning. They laughed at the traps.
+Tigers were known in those days for their intelligence, beauty and cunning. They laughed at the traps. ![illustration of chef in soup pot](../images/cooking-ts.jpg)
 
 As the days passed Hedgehog put out more traps, confident a tiger would be caught. “If I just make more of the soup base, perhaps the wind will carry the lovely smell to a tiger and she will simply jump into my pot.” 
 

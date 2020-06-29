@@ -16,6 +16,7 @@ const SELECTORS = {
   MOBILE_NAVIGATION: '.js-mobile-navigation',
   CLOSE_BTN: '.js-close-btn',
   MOBILE_NAVIGATION_LIST_ITEM: '.js-mobile-list-item',
+  MOBILE_NAVIGATION_CONTENT: '.js-mobile-nav-content',
   MOBILE_NAVIGATION_HEADER: '.js-mobile-nav-header',
   BODY: '.js-body',
   THOUGHT_STARTERS: '.js-thought-starters',
@@ -52,6 +53,7 @@ class Main {
     this.section = [...document.querySelectorAll(SELECTORS.PAGE_SECTION)];
     this.mobileNavigationLink = document.querySelector(SELECTORS.MOBILE_NAVIGATION_LINK);
     this.mobileNavigation = document.querySelector(SELECTORS.MOBILE_NAVIGATION);
+    this.mobileNavigationContent = document.querySelector(SELECTORS.MOBILE_NAVIGATION_CONTENT);
     this.closeButton = document.querySelector(SELECTORS.CLOSE_BTN);
     this.mobileNavigationHeader = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_HEADER)];
     this.mobileNavigationListItems = [...document.querySelectorAll(SELECTORS.MOBILE_NAVIGATION_LIST_ITEM)];
@@ -117,6 +119,9 @@ class Main {
   openNavigation() {
     this.mobileNavigation.style.width = "100%";
     this.body.classList.add(CLASSES.SCROLL_OFF);
+    setTimeout(() => {
+      this.mobileNavigationContent.classList.add(CLASSES.SHOW);
+    }, 350); 
   }
 
   /**
@@ -125,6 +130,7 @@ class Main {
   closeNavigation() {
     this.mobileNavigation.style.width = "0%";
     this.body.classList.remove(CLASSES.SCROLL_OFF);
+    this.mobileNavigationContent.classList.remove(CLASSES.SHOW);
   }
 
   /**
