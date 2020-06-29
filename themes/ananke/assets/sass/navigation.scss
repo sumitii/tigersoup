@@ -60,8 +60,8 @@
   width: 200px;
 
   &__subnav {
-    // @include slide-down($transition-slow);
     margin-bottom: -12px;
+    margin-top: 12px;
     max-height: 0;
     overflow-y: hidden;
     padding-left: 18px;

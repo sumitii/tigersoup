@@ -3,7 +3,7 @@ title: "New Challenges"
 date: 2020-05-06T11:35:58+05:30
 draft: false
 header_text: "New Challenges"
-intro_text: "Ut enim ad minim veniam, quis nostrud exercitation. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Here are three challenges that may require some Tiger Soup:"
+intro_text: "Everyday our industry presents us with new challenges, and now more than ever is the moment to use breakthrough creative thinking to translate those challenges into opportunities. Here are some examples of modern day challenges that may require some Tiger Soup:"
 caret: "images/caret.svg"
 image: "../../images/net.png"
 type: about

@@ -3,12 +3,12 @@
   {{ partial "vertical-navigation.html" . }}
   <div class="w-70-ns w-100-m w-100 mt2">
     <section id="about" class="section-wrapper js-section">
-      <div id="introduction" class="mt4">
-        <div class="introduction__image-wrapper w-100 w-75-ns pa2">
+      <div id="introduction">
+        <div class="introduction__image-wrapper w-100 w-75-ns">
           <img src="{{ .Params.featured_image }}" />
         </div>
         <div class="introduction measure-wide f4 lh-copy">
-          <h2 class="lh-title f2 green-800">{{ .Params.intro_text }}</h2>
+          <h2 class="lh-title f2 mt0 green-800">{{ .Params.intro_text }}</h2>
           <div class="chronicle">
             {{ .Content }}
           </div>

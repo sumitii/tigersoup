@@ -162,6 +162,12 @@ MODIFYING CLASSES
   opacity: 1;
   transition: opacity 0.2s;
   z-index: 100;
+
+  .navigation-list {
+    &__subnav {
+      max-height: 100%;
+    }
+  }
 }
 
 .-display {
@@ -184,14 +190,6 @@ MODIFYING CLASSES
 }
 
 .introduction {
-  p {
-    &:first-of-type {
-      &:first-letter {
-        @include first-letter;
-      }
-    }
-  }
-
   &__image-wrapper {
     margin: 0 auto;
 
@@ -238,10 +236,6 @@ MODIFYING CLASSES
       font-family: 'Chronicle Text G4';
       font-weight: 400;
     }
-
-    &::first-letter {
-      @include first-letter;
-    }
   }
 
   &__image-wrapper {
@@ -251,4 +245,8 @@ MODIFYING CLASSES
       margin: 0; 
     }
   }
+}
+
+.footer {
+  margin: 0 auto;
 }

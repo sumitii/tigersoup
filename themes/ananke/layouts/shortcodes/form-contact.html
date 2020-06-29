@@ -8,27 +8,27 @@
     <div class="grey-900 ringside-book">123 Hello Drive<br/>Portland OR 97212</div>
     <div class="contact-form__list-wrapper orange-500 ringside mt4">
       <ul class="contact-form__list">
-        <li class="contact-form__list-item mb2">
+        <li class="contact-form__list-item ringside-book mb2">
           <object class="sm-icon mr1" data="{{ .Page.Params.email_icon }}" type="image/svg+xml"><img src="{{ .Page.Params.email_icon }}" /></object>billfritsch@tigersoup.net</li>
-        <li class="contact-form__list-item">
+        <li class="contact-form__list-item ringside-book">
           <object class="sm-icon mr1" data="{{ .Page.Params.phone_icon }}" type="image/svg+xml"><img src="{{ .Page.Params.phone_icon }}" /></object>121-121-0121</li>
       </ul>
     </div>
   </div>
   <div class="contact-form__content measure f4 lh-copy ml0">
-    <form class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
+    <form class="mv4" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
   
       <label class="ringside-light f6 lh-copy ttu tracked"  for="name">{{ i18n "yourName" }}</label>
-      <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
+      <input type="text" id="name" name="name" class="mb4 {{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
   
       <label class="ringside-light f6 lh-copy ttu tracked" for="email">{{ i18n "emailAddress" }}</label>
-      <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
-      <div class="requirements f6 gray glow i overflow-hidden mb3">
+      <input type="email" id="email" name="email" class="mb2 {{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
+      <div class="requirements f6 gray glow i overflow-hidden mb4">
         {{ i18n "emailRequiredNote" }}
       </div>
   
       <label class="ringside-light f6 lh-copy ttu tracked" for="message">{{ i18n "message" }}</label>
-      <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4 message-textarea" aria-labelledby="message"></textarea>
+      <textarea id="message" name="message" class="mb4 {{ $.Scratch.Get "inputClasses" }} h4 message-textarea" aria-labelledby="message"></textarea>
   
       <input class="contact-form__submit-button w-25-ns mv2 ringside grey-900 pa3" type="submit" value="{{ i18n "send" }}" />
     </form>
