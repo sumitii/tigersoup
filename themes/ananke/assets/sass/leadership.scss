@@ -1,12 +1,6 @@
 .leadership {
   &__image-wrapper {
-    justify-content: center;
-    max-width: 100vw;
-    padding-right: 0;
-
-    &__image {
-      width: 85%;
-    }
+    @include md-image;
   }
 
   &__quote {
@@ -16,16 +10,6 @@
 
   &__challenges-list-item {
     font-weight: 200;
-  }
-
-  @media screen and (min-width: 768px) {
-    &__image-wrapper {
-      justify-content: end;
-    }
-  
-    &__image {
-      width: 50%;
-    }
   }
 }
 

@@ -70,5 +70,17 @@ $glide-modifier-separator: '--' !default;
 
   @media screen and (min-width: 768px) {
     transform: translateY(40%);
+    width: 270px;
+  } 
+}
+
+@mixin md-image {
+  margin: 0 auto;
+  transform: translate(0, 0);
+  width: 270px;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 0 auto;
+    transform: translate(-10%, 20%);
   } 
 }
