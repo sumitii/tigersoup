@@ -10,10 +10,10 @@
             {{ .Pre }}
             <span class="">{{ .Name }}</span>
           </a>
-          <ul class="navigation-list navigation-list__subnav mt3 js-subnavigation">
+          <ul class="navigation-list navigation-list__subnav navigation-list{{if eq $currentURL "/tigersoup/" }}--homepage-active-nav {{end}} mt3 js-subnavigation">
             {{ range .Children }}
               <li class="navigation-list__subnav-list-item">
-                <a class="side-nav__link {{ if eq $currentURL .URL }}ringside-light {{else}}ringside{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                <a class="side-nav__link {{ if eq $currentURL .URL }}ringside-light {{ else if eq $currentURL "/tigersoup/" }} {{else}}ringside{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
               </li>
             {{ end }}
           </ul>

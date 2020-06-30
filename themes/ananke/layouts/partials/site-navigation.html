@@ -23,19 +23,27 @@
 
 <div class="js-mobile-navigation mobile-navigation bg-white">
   <div class="mobile-navigation__inner-wrapper">
-    {{ with .Site.GetPage "_index.md" }}
+    {{ if or (eq .URL "/tigersoup/story/") (eq .URL "/tigersoup/contact/") }}
     <a href="javascript:void(0)" class="close-btn flex flex-row-reverse pt3 pr3 js-close-btn">
-      <object class="close-icon mr1" data="{{ if eq (.URL) ("/" | safeHTML) }}{{ .Params.mobile_nav_close }}{{ else }}../../{{ .Params.mobile_nav_close }}{{ end }}" type="image/svg+xml">
-        <img src="{{ if eq (.URL) ("/" | safeHTML) }}{{ .Params.mobile_nav_close }}{{ else }}../../{{ .Params.mobile_nav_close }}{{ end }}" />
+      <object class="close-icon mr1" data="../images/menu-close-icon.svg" type="image/svg+xml">
+        <img src="../images/menu-close-icon.svg" />
+      </object>
+    </a>
+    {{ else if (eq .URL "/tigersoup/") }}
+    <a href="javascript:void(0)" class="close-btn flex flex-row-reverse pt3 pr3 js-close-btn">
+      <object class="close-icon mr1" data="images/menu-close-icon.svg" type="image/svg+xml">
+        <img src="images/menu_close-icon.svg" />
       </object>
     </a>
     {{ else }}
     <a href="javascript:void(0)" class="close-btn flex flex-row-reverse pt3 pr3 js-close-btn">
-      <object class="close-icon mr1" data="../../{{ .Params.mobile_nav_close }}" type="image/svg+xml"><img src="../../{{ .Params.mobile_nav_close }}" /></object>
+      <object class="close-icon mr1" data="../../images/menu-close-icon.svg" type="image/svg+xml">
+        <img src="../../images/menu_close-icon.svg" />
+      </object>
     </a>
     {{ end }}
     <div class="mobile-navigation__header-wrapper pt4 js-mobile-nav-content">
-      <ul class="f2 fw2 green-800">
+      <ul class="mobile-navigation__header-list-wrapper f2 fw2 green-800">
         <li class="mobile-navigation__header-list di f2 green-800 js-mobile-nav-header" data-header="about">About</li>/
         <li class="mobile-navigation__header-list di f2 green-800 js-mobile-nav-header" data-header="thought starters">Thought Starters</li>/
         <li class="mobile-navigation__header-list di f2 green-800 js-mobile-nav-header" data-header="contact">Contact</li>/

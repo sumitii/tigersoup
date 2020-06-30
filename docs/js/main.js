@@ -143,7 +143,14 @@ class Main {
     e.target.classList.add(CLASSES.ACTIVE);
     this.mobileNavigationListItems.forEach(item => {
       if (e.target.dataset.header === item.dataset.listHeader) {
-        item.classList.add(CLASSES.SHOW_NAV);
+        // If contact or fable link go directly to page
+        if (item.dataset.listHeader === 'contact') {
+          window.location = '/tigersoup/contact/';
+        } if (item.dataset.listHeader === 'a fable') {
+          window.location = '/tigersoup/story/';
+        } else {
+          item.classList.add(CLASSES.SHOW_NAV);
+        }
       } else {
         item.classList.remove(CLASSES.SHOW_NAV);
       }
