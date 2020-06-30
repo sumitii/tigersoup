@@ -1,6 +1,6 @@
-<div class="leadership w-100 w-80-ns w-100-m">
+<div class="leadership">
   <div class="leadership__image-wrapper flex flex-row-reverse">
-    <img src="{{ .Params.leadership_image }}" />
+    <img class="leadership__image" src="{{ .Params.leadership_image }}" />
   </div>
   <h3 class="header-text green-800 f2 mb4">{{ .Title }}</h3>
   <div class="measure-wide f4 lh-copy">
@@ -8,8 +8,8 @@
     <div class="mb4 mb3-ns leadership__quote chronicle green-800">{{ .Params.leadership_quote }}</div>
     <div class="leadership__contact orange-500">
       <img class="sm-icon mr1" src="{{ .Params.email_icon }}"/>
-      <a class="ringside orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a>
+      <a class="ringside-book orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a>
     </div>
-    <p class="leadership__copy ringside-light mt5 f4 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
+    <p class="leadership__copy ringside-light mt4 f4 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
   </div>
 </div>

@@ -4,7 +4,7 @@
     max-width: 100vw;
     padding-right: 0;
 
-    img {
+    &__image {
       width: 85%;
     }
   }
@@ -23,8 +23,8 @@
       justify-content: end;
     }
   
-    img {
-      width: auto;
+    &__image {
+      width: 50%;
     }
   }
 }

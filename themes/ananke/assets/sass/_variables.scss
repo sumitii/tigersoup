@@ -66,7 +66,7 @@ $glide-modifier-separator: '--' !default;
 @mixin sm-image {
   margin: 0 0 0 auto;
   transform: translateY(10%);
-  width: 270px;
+  width: 300px;
 
   @media screen and (min-width: 768px) {
     transform: translateY(40%);

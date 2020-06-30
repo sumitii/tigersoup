@@ -4,6 +4,14 @@
 }
 
 .contact-form {
+  &__wrapper {
+    margin-top: 0;
+
+    @media screen and (min-width: 768px) {
+      margin-top: -15%;
+    }
+  }
+
   &__intro {
     font-size: 24px;
     line-height: 32px;
