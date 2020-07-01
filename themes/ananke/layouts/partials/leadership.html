@@ -1,15 +1,16 @@
 <div class="leadership measure-wide f4 lh-copy">
-  <div class="leadership__image-wrapper flex flex-row-reverse">
+  <div class="leadership__image-wrapper flex flex-row-reverse pr4">
     <img class="leadership__image" src="{{ .Params.leadership_image }}" />
   </div>
-  <div>
-    <h3 class="header-text green-800 f2 mb4">{{ .Title }}</h3>
-    <p class="chronicle grey-900 f3">{{ .Params.leadership_intro }}</p>
-    <div class="mb4 mb3-ns leadership__quote chronicle green-800">{{ .Params.leadership_quote }}</div>
-    <div class="leadership__contact orange-500">
-      <img class="sm-icon mr1" src="{{ .Params.email_icon }}"/>
-      <a class="ringside-book orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a>
-    </div>
-    <p class="leadership__copy ringside-light mt4 f4 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
+  <h3 class="header-text green-800 f1 mb4">{{ .Title }}</h3>
+  <p class="chronicle grey-900 f3">{{ .Params.leadership_intro }}</p>
+  <div class="mb4 mb3-ns leadership__quote f4 lh-copy chronicle grey-900">
+    <p>"{{ .Params.leadership_quote_p1 }}</p>
+    <p>{{ .Params.leadership_quote_p2 }}"</p>
   </div>
+  <div class="leadership__contact orange-500">
+    <img class="sm-icon mr1" src="{{ .Params.email_icon }}"/>
+    <a class="ringside-book orange-500 no-underline" href="mailto:bill@tigersoup.net">{{ .Params.email_address }}</a>
+  </div>
+  <p class="leadership__copy ringside-light mt4 f6 lh-copy grey-900">{{ .Params.leadership_main_copy }}</p>
 </div>

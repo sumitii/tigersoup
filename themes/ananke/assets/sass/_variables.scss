@@ -65,24 +65,21 @@ $glide-modifier-separator: '--' !default;
 
 @mixin sm-image {
   margin: 0 0 0 auto;
-  transform: translateY(10%);
-  width: 300px;
+  transform: translate(0, 0);
+  width: 220px;
 
   @media screen and (min-width: 768px) {
-    transform: translateY(40%);
-    width: 270px;
+    transform: translate(0, 25%);
   } 
 }
 
 @mixin md-image {
-  height: 420px;
   margin: 0 auto;
-  width: 350px;
+  width: 80%;
 
   @media screen and (min-width: 768px) {
-    height: 330px;
     margin: 0 0 0 auto;
     transform: translateY(10%);
-    width: 270px;
+    width: 50%;
   } 
 }

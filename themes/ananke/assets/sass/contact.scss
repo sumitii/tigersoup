@@ -29,8 +29,14 @@
 
   &__submit-button {
     background: #fff;
-    border: solid 1px #CE5833;
+    border: solid 1px $orange-500;
     border-width: 1px;
+
+    &:hover {
+      background-color: $orange-500;
+      border: solid 1px $grey-900;
+      color: #fff;
+    }
   }
 
   @media screen and (min-width: 768px) {

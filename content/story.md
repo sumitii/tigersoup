@@ -22,6 +22,6 @@ As the days passed the chef put out more traps, confident a tiger would be caugh
 
 In the end there was no tiger soup and the king’s embarrassment was so great the he banished the chef from the land. 
 
-## The moral
+# The Moral
 
 ### When unusual challenges arise, it is natural to focus on the things that have worked for us in the past. When making tiger soup however, it is best to focus first on catching the tiger. This often requires thinking untethered by the past.

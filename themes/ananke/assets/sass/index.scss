@@ -25,6 +25,7 @@ html {
 
 body {
   font-family: 'Quarto Semibold';
+  overflow-x: hidden;
 }
 
 .site-wrapper,
@@ -227,6 +228,7 @@ MODIFYING CLASSES
 
 .our-story {
   &__copy {
+    h1,
     h2 {
       color: $green-800;
       font-family: 'Quarto Semibold';
@@ -254,7 +256,7 @@ MODIFYING CLASSES
     margin: 0 auto;
 
     @media screen and (min-width: 768px) {
-      margin: 0; 
+      margin-top: -5%;
     }
   }
 }

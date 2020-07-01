@@ -2,21 +2,21 @@
 <div class="flex justify-between">
   {{ partial "vertical-navigation.html" . }}
   <div class="section-wrapper what-we-do w-70-ns w-100-m w-100 js-section">
-    <div class="sm-image-wrapper">
-      <img src="{{ .Params.image }}" />
-    </div>
-      <div class="measure-wide f4 lh-copy">
-        <h2 class="header-text green-800 f2 mt0 mb4 w-100">{{ .Title }}</h2>
-        <h3 class="chronicle grey-900 measure f3 fw4">{{ .Params.what_we_do_intro }}</h3>
-        <div class="leadership__link-wrapper">
-          <a class="ringside orange-500 no-underline f5 js-read-more-link" href="javascript:void(0)">
-            {{ .Params.more_button }}
-            <object class="caret sm-icon mr1 js-caret" data="{{ .Params.caret }}" type="image/svg+xml"><img src="{{ .Params.caret }}" /></object>
-          </a>
-        </div>
-        <div class="read-more__text-wrapper measure-wide f4 lh-copy chronicle grey-900 js-wwd-content">
-          {{ .Content }}
-        </div>
+    <div class="measure-wide f4 lh-copy">
+      <div class="sm-image-wrapper">
+        <img src="{{ .Params.image }}" />
+      </div>
+      <h2 class="header-text green-800 f1 mt0 mb4 w-100">{{ .Title }}</h2>
+      <h3 class="chronicle grey-900 measure f3 fw4">{{ .Params.what_we_do_intro }}</h3>
+      <div class="leadership__link-wrapper">
+        <a class="ringside orange-500 no-underline f5 js-read-more-link" href="javascript:void(0)">
+          {{ .Params.more_button }}
+          <object class="caret sm-icon mr1 js-caret" data="{{ .Params.caret }}" type="image/svg+xml"><img src="{{ .Params.caret }}" /></object>
+        </a>
+      </div>
+      <div class="read-more__text-wrapper measure-wide f4 lh-copy chronicle grey-900 js-wwd-content">
+        {{ .Content }}
+      </div>
     </div>
     {{ with .Site.GetPage "resources" }}
       {{ partial "resources" . }}

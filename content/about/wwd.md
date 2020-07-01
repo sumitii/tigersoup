@@ -16,7 +16,7 @@ Marketplace success now depends on the ability to move quickly, outthink your co
 
 TigerSoup works with top leadership of brands that are concerned their built-in resources aren’t pivoting to the new realities fast enough.  Or that their existing teams don’t have the training to quick-start the response to the new realities. We custom assemble teams of talented people with deep knowledge of the industry in question along with life-long records of superior performance in the marketplace. Ours is a completely virtual business with no offices, work is conducted via video screen and online communications. Which means we can choose team members from a worldwide pool of the best possible talent. 
 
-Our job is not to replace valued creative resources. Rather, we help companies quickly pivot to the new marketplace by redefining communication strategies, evaluating consumer experiences in comparison to competitors, and creating bold new work that demonstrates industry leadership. Once we have caught the tiger we disappear with no expectations of ongoing work. 
+Our job is not to replace valued creative resources. Rather, we help companies quickly pivot to the new marketplace by redefining communication strategies, evaluating consumer experiences in comparison to competitors, and creating bold new work that demonstrates industry leadership. Once we help your team catch the tiger we disappear with no expectation of ongoing work.
 
 
 
