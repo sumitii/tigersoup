@@ -50,13 +50,6 @@
                 {{ end }}
             </ul>
           </div>
-          {{ else }}
-            <li class="mobile-navigation__list-wrapper mb3 js-mobile-list-item" data-list-header="{{ lower .Name }}">
-                <a href="{{ .URL }}" class="side-nav__link--main ringside">
-                    {{ .Pre }}
-                    <span>{{ .Name }}</span>
-                </a>
-            </li>
           {{ end }}
         {{ end }}
       </ul>

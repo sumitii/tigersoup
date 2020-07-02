@@ -141,17 +141,18 @@ class Main {
       node.classList.remove(CLASSES.ACTIVE);
     });
     e.target.classList.add(CLASSES.ACTIVE);
+    // If contact or fable link go directly to page
+    if (e.target.dataset.header === 'contact') {
+      window.location = '/tigersoup/contact/';
+    }
+    if (e.target.dataset.header === 'a fable') {
+      window.location = '/tigersoup/story/';
+    } 
     this.mobileNavigationListItems.forEach(item => {
       if (e.target.dataset.header === item.dataset.listHeader) {
-        // If contact or fable link go directly to page
-        if (item.dataset.listHeader === 'contact') {
-          window.location = '/tigersoup/contact/';
-        } if (item.dataset.listHeader === 'a fable') {
-          window.location = '/tigersoup/story/';
-        } else {
-          item.classList.add(CLASSES.SHOW_NAV);
-        }
-      } else {
+        item.classList.add(CLASSES.SHOW_NAV);
+      }
+      else {
         item.classList.remove(CLASSES.SHOW_NAV);
       }
     });

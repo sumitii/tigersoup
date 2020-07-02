@@ -1,6 +1,6 @@
 ---
 title: "Our story"
-description: "The Legend of Tiger Soup"
+description: "A Fable of Tiger Soup"
 featured_image: '../images/who-we-are.jpg'
 secondary_image: '../images/cooking-ts.jpg'
 date: 2020-05-06T11:35:58+05:30
