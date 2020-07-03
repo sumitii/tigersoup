@@ -9,4 +9,4 @@ type: contact
 layout: contact
 ---
 
-{{< form-contact action="https://formspree.io/your@email.com" >}}
+{{< form-contact action="https://formspree.io/mknqqnyk" >}}
