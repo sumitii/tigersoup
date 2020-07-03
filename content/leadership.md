@@ -9,7 +9,7 @@ email_address: billfritsch@tigersoup.net
 thought_starter_button: "Thought starters"
 leadership_quote_p1: "In 2019 a Forrester research study concluded that in the age of martech and digital automation, brands across categories are becoming indistinguishable from each other. In our post-COVID-19 age, many companies will have to re-evaluate how they not only keep their own customers from the grips of strong competitors, but how they can steal customers from formidable competitors. In markets where demand is diminished inventiveness emerges. We are now entering an age of fierce competition."
 leadership_quote_p2: "I have spent a long career working in leadership roles alongside a host of inventive minds, many of whom have created work that is recognizable across the planet. Bringing together powerful creative minds into a focus that helps companies differentiate from their competitors requires careful curation of competitive minds. That is what we have set out to do with Tiger Soup."
-leadership_main_copy: "His credentials include CEO of Digital Kitchen (Multiple Emmy Award winning creator of work recognized by people around the world); CEO of Cf2GS(one of the leading direct marketing agency brands in the US) and Director of Creative Services at Walt Disney (where his team helped to launch The Disney Channel and Disney Home Video)."
+leadership_main_copy: "Bill's credentialsminclude CEO of Digital Kitchen (Multiple Emmy Award winning creator of work recognized by people around the world); CEO of Cf2GS(one of the leading direct marketing agency brands in the US) and Director of Creative Services at Walt Disney (where his team helped to launch The Disney Channel and Disney Home Video)."
 caret: "../../images/caret.svg"
 ---
 

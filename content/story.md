@@ -9,7 +9,7 @@ type: story
 layout: story
 ---
 
-Long ago, there was a King and his favorite chef. The king’s favorite chef had a knack for making tasty soups. Much of his success lay with the gathering of unique local vegetables and spices and roasting these into a savory base. Into this carefully produced stock he added a variety of meats like fish, chicken and whatever else he could catch. The soup was so tasty that it didn’t matter much what meat was added. The king loved the soups and the chef lived a happy and stress-free life.
+Long ago, there was a King and his favorite chef. The chef had a knack for making tasty soups. Much of his success lay with the gathering of unique local vegetables and spices and roasting these into a savory base. Into this carefully produced stock he added a variety of meats like fish, chicken and whatever else he could catch. The soup was so tasty that it didn’t matter much what meat was added. The king loved the soups and the chef lived a happy and stress-free life.
 
 One day the king got an unusual dinner request from an important visitor from a far-off land. The chef was thus ordered to make tiger soup for dinner several days hence. 
 
