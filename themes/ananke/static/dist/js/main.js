@@ -24,6 +24,7 @@ const SELECTORS = {
   READ_MORE_LINK: '.js-read-more-link',
   WHAT_WE_DO_CONTENT: '.js-wwd-content',
   CARET: '.js-caret',
+  DATE: '.js-date',
 }
 
 /**
@@ -62,8 +63,10 @@ class Main {
     this.thoughtStarters = document.querySelector(SELECTORS.THOUGHT_STARTERS);
     this.wwdContent = document.querySelector(SELECTORS.WHAT_WE_DO_CONTENT);
     this.caret = [...document.querySelectorAll(SELECTORS.CARET)];
+    this.date = document.querySelector(SELECTORS.DATE);
 
     this.setActiveNavigation = this.setActiveNavigation.bind(this);
+    this.getDayOfWeek = this.getDayOfWeek.bind(this);
     this.openNavigation = this.openNavigation.bind(this);
     this.closeNavigation = this.closeNavigation.bind(this);
     this.toggleReadMoreSection = this.toggleReadMoreSection.bind(this);
@@ -76,6 +79,7 @@ class Main {
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
+      this.getDayOfWeek();
       this.fadeInSection();
       if (document.querySelector('.glide')) {
         new Glide('.glide', {
@@ -111,6 +115,16 @@ class Main {
         node.addEventListener("click", this.setActiveNavigation);
       });
     });
+  }
+
+  /**
+   * Display the day of the week
+   */
+  getDayOfWeek() {
+    var d = new Date();
+    var dayOfWeek = d.getDay();
+
+    this.date.innerHTML = dayOfWeek;
   }
 
   /**
