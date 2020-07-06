@@ -1,4 +1,4 @@
-baseURL = "http://tigersoup.net/"
+baseURL = "https://tigersoup.net/"
 languageCode = "en-us"
 title = "Tiger Soup"
 theme = "ananke"

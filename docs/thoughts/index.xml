@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thoughts on Tiger Soup</title>
-    <link>http://tigersoup.net/thoughts/</link>
+    <link>https://tigersoup.net/thoughts/</link>
     <description>Recent content in Thoughts on Tiger Soup</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://tigersoup.net/thoughts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tigersoup.net/thoughts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Thought Starter 01</title>
-      <link>http://tigersoup.net/thoughts/first/</link>
+      <link>https://tigersoup.net/thoughts/first/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://tigersoup.net/thoughts/first/</guid>
+      <guid>https://tigersoup.net/thoughts/first/</guid>
       <description>Ambitioni dedisse scripsisse iudicaretur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Integer legentibus erat a ante historiarum dapibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Fabio vel iudice vincam, sunt in culpa qui officia. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Contra legem facit qui id facit quod lex prohibet.
 Quis aute iure reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</description>
     </item>
     
     <item>
       <title>Thought Starter 02</title>
-      <link>http://tigersoup.net/thoughts/second/</link>
+      <link>https://tigersoup.net/thoughts/second/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://tigersoup.net/thoughts/second/</guid>
+      <guid>https://tigersoup.net/thoughts/second/</guid>
       <description>Ambitioni dedisse scripsisse iudicaretur. Morbi fringilla convallis sapien, id pulvinar odio volutpat. Integer legentibus erat a ante historiarum dapibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Fabio vel iudice vincam, sunt in culpa qui officia. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Contra legem facit qui id facit quod lex prohibet.
 Quis aute iure reprehenderit in voluptate velit esse. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</description>
     </item>
