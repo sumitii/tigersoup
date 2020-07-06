@@ -143,10 +143,10 @@ class Main {
     e.target.classList.add(CLASSES.ACTIVE);
     // If contact or fable link go directly to page
     if (e.target.dataset.header === 'contact') {
-      window.location = '/tigersoup/contact/';
+      window.location = '/contact/';
     }
     if (e.target.dataset.header === 'a fable') {
-      window.location = '/tigersoup/story/';
+      window.location = '/story/';
     } 
     this.mobileNavigationListItems.forEach(item => {
       if (e.target.dataset.header === item.dataset.listHeader) {

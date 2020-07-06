@@ -26,22 +26,6 @@ publishDir = "docs"
     url = "/about/challenges/"
     weight = 3
   [[menu.main]]
-    identifier = "thoughts"
-    name = "Thought starters"
-    title = "Thought starters"
-    url = "#"
-    weight = -9
-  [[menu.main]]
-    parent = "thoughts"
-    name = "Thought starters 01"
-    url = "/thoughts/first/"
-    weight = 1
-  [[menu.main]]
-    parent = "thoughts"
-    name = "Thought starters 02"
-    url = "/thoughts/second/"
-    weight = 2
-  [[menu.main]]
     identifier = "contact"
     name = "Contact"
     title = "Contact"
