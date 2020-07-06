@@ -123,8 +123,10 @@ class Main {
   getDayOfWeek() {
     var d = new Date();
     var dayOfWeek = d.getDay();
+    var options = { weekday: 'long'};
+    var dayFormated = new Intl.DateTimeFormat('en-US', options).format(dayOfWeek);
 
-    this.date.innerHTML = dayOfWeek;
+    this.date.innerHTML = dayFormated;
   }
 
   /**
