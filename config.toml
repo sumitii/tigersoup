@@ -1,4 +1,4 @@
-baseURL = "https://tigersoup.net/"
+baseURL = "http://tigersoup.net/"
 languageCode = "en-us"
 title = "Tiger Soup"
 theme = "ananke"
@@ -22,9 +22,25 @@ publishDir = "docs"
     weight = 2
   [[menu.main]]
     parent = "about"
-    name = "New Challenges"
+    name = "New challenges"
     url = "/about/challenges/"
     weight = 3
+  [[menu.main]]
+    identifier = "thoughts"
+    name = "Thought starters"
+    title = "Thought starters"
+    url = "#"
+    weight = -9
+  [[menu.main]]
+    parent = "thoughts"
+    name = "Thought starters 01"
+    url = "/thoughts/first/"
+    weight = 1
+  [[menu.main]]
+    parent = "thoughts"
+    name = "Thought starters 02"
+    url = "/thoughts/second/"
+    weight = 2
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
