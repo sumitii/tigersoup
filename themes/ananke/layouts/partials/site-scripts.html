@@ -4,7 +4,7 @@
 {{ end }}
 
 {{ range .Site.Params.custom_js -}}
-  <script src="{{ . | absURL }}"></script>
+  <script src="{{ relURL (printf "%s%s" "dist/" .) }}"></script>
 {{- end }}
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
