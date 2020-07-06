@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Tiger Soup</title>
-    <link>http://sumitii.github.io/tigersoup/post/</link>
+    <link>http://tigersoup.net/post/</link>
     <description>Recent content in Posts on Tiger Soup</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 10 May 2020 11:35:58 +0530</lastBuildDate>
     
-	<atom:link href="http://sumitii.github.io/tigersoup/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tigersoup.net/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Second Article</title>
-      <link>http://sumitii.github.io/tigersoup/post/second-article/</link>
+      <link>http://tigersoup.net/post/second-article/</link>
       <pubDate>Sun, 10 May 2020 11:35:58 +0530</pubDate>
       
-      <guid>http://sumitii.github.io/tigersoup/post/second-article/</guid>
+      <guid>http://tigersoup.net/post/second-article/</guid>
       <description>With the corona virus business shutdown, the world as we knew it is forever changed. It will be many years before we fully recover from the mess that is only now beginning to show itself. With shrunken markets in our future and fierce pressure for growth, companies will have to grab share from their competitors to meet their goals. Per Forrester Research this is not what today’s digital design industry is offering major brands.</description>
     </item>
     
     <item>
       <title>Back to the Future</title>
-      <link>http://sumitii.github.io/tigersoup/post/back-to-the-future/</link>
+      <link>http://tigersoup.net/post/back-to-the-future/</link>
       <pubDate>Wed, 06 May 2020 11:35:58 +0530</pubDate>
       
-      <guid>http://sumitii.github.io/tigersoup/post/back-to-the-future/</guid>
+      <guid>http://tigersoup.net/post/back-to-the-future/</guid>
       <description>With the corona virus business shutdown, the world as we knew it is forever changed. It will be many years before we fully recover from the mess that is only now beginning to show itself. With shrunken markets in our future and fierce pressure for growth, companies will have to grab share from their competitors to meet their goals. Per Forrester Research this is not what today’s digital design industry is offering major brands.</description>
     </item>
     
