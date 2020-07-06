@@ -8,7 +8,7 @@ draft: false
 featured_image: "images/tiger_hunt.jpg"
 type: "about"
 layout: "about"
-intro_text: "If you want tiger soup, it is best to first focus on catching the tiger."
+intro_text: "If you want tiger soup, you have to catch a tiger."
 ---
 
 It is a common mistake to spend too much time searching for fresh vegetables and unique spices when the goal is tiger soup. These are easy and fun to do. While these activities are certainly essential in making a savory soup, the hard part is getting your hands on a tiger. No tiger...NO tiger soup!
