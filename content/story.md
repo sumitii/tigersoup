@@ -24,4 +24,4 @@ In the end there was no tiger soup and the king’s embarrassment was so great t
 
 # The Moral
 
-### When unusual challenges arise, it is natural to focus on the things that have worked for us in the past. When making tiger soup however, it is best to focus first on catching the tiger. This often requires thinking untethered by the past.
+### When unusual challenges arise, it is natural to focus on the things that have worked for us in the past. When making tiger soup however, it is best to focus first on catching the tiger. This often requires thinking untethered to the past.
