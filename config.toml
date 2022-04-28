@@ -39,3 +39,4 @@ publishDir = "docs"
     weight = -7
 [params]
     custom_js = ["/js/main.js"]
+
