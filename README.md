@@ -14,6 +14,7 @@ This document gives a high level overview on how to set up the TigerSoup website
 
 This site uses the Hugo framework. Please reference their quick start guide at https://gohugo.io/getting-started/quick-start/ to get started.
 
+NOTE: This site is not compatible with the most recent version of Hugo. When installing Hugo, please use version 0.70.0
 
 ## Project Notes <a name="project-notes"></a>
 

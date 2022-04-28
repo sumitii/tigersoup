@@ -55,9 +55,6 @@ Inside the folder of your Hugo site run:
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
-When installing Hugo, please use v.70.0. The site does not work using the most recent version of Hugo.
-
-
 
 ## Getting started
 
